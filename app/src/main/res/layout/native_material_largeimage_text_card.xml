@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Card visible layout -->
+    <it.gmariotti.cardslib.library.view.ForegroundLinearLayout
+        android:id="@+id/card_main_layout"
+        style="@style/card.native.main_layout_foreground"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <it.gmariotti.cardslib.library.view.component.CardThumbnailView
+            style="@style/card.native.card_thumbnail_outer_layout"
+            android:id="@+id/card_thumbnail_layout"
+            android:layout_width="match_parent"
+            card:card_thumbnail_layout_resourceID="@layout/native_thumbnail_largematerial"
+            android:layout_height="match_parent"/>
+
+        <!-- Main Content View -->
+
+
+
+    </it.gmariotti.cardslib.library.view.ForegroundLinearLayout>
+
+    <FrameLayout
+        android:id="@+id/card_content_expand_layout"
+        style="@style/card.native.main_contentExpand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </FrameLayout>
+
+    <ViewStub
+        android:id="@+id/card_supplemental_actions_vs"
+        android:inflatedId="@+id/card_supplemental_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
