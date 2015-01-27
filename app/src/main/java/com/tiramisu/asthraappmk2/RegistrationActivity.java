@@ -5,22 +5,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends BaseActivity {
-
+public class RegistrationActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        super.onBaseCreate("Asthra");
-
+        setContentView(R.layout.activity_registration);
+        super.onBaseCreate("Registration");
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_registration, menu);
         return true;
     }
 
@@ -40,7 +38,6 @@ public class MainActivity extends BaseActivity {
     }
 
     protected int getSelfNavDrawerItem() {
-        return NAVDRAWER_ITEM_HOME;
+        return NAVDRAWER_ITEM_REG;
     }
-
 }

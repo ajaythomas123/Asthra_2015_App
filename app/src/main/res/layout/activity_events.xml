@@ -4,7 +4,7 @@
     android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".EventsActivity">
 
     <include
         android:id="@+id/app_bar"
@@ -19,13 +19,21 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <it.gmariotti.cardslib.library.recyclerview.view.CardRecyclerView
+
+                android:id="@+id/carddemo_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                card:list_card_layout_resourceID="@layout/native_recyclerview_card_layout" />
         </RelativeLayout>
 
-        <android.support.v7.widget.RecyclerView android:id="@+id/drawerList"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/drawerList"
             android:layout_width="280dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:background="@color/white_background"/>
+            android:background="@color/white_background" />
 
 
     </android.support.v4.widget.DrawerLayout>
