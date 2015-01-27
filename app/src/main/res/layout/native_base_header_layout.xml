@@ -1,9 +1,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/card.native.header_compound_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
     android:layout_alignParentLeft="true"
-    style="@style/card.native.header_compound_view">
+    android:layout_alignParentTop="true">
 
     <!-- This is the Inner Content Header which you can populate runtime
          with setupInnerViewElements(android.view.ViewGroup, android.view.View) method in CardHeader class.-->
@@ -11,7 +11,7 @@
         android:id="@+id/card_header_inner_frame"
         style="@style/card.native.header_inner_frame"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 
     <!-- This is the Button Frame.
@@ -27,21 +27,21 @@
             android:id="@+id/card_header_button_overflow"
             style="@style/card.native.header_button_base.overflow"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <!-- Expand/Collapse button. It shows/hides a Hidden Frame-->
         <ImageButton
             android:id="@+id/card_header_button_expand"
             style="@style/card.native.header_button_base.expand"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <!-- Other button. You can customize it with your style file -->
         <ImageButton
             android:id="@+id/card_header_button_other"
             style="@style/card.native.header_button_base.other"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </FrameLayout>
 
 </RelativeLayout>

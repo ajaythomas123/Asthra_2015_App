@@ -44,4 +44,6 @@ dependencies {
     //compile 'com.github.gabrielemariotti.cards:cardslib-extra-twoway:2.0.1'
 
     compile 'com.guerwan:transitionbackport:1.1'
+
+    compile 'it.neokree:MaterialTabs:0.11'
 }

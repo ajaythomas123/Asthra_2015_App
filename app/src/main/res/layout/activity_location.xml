@@ -3,7 +3,7 @@
     android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tiramisu.asthraappmk2.MainActivity">
+    tools:context="com.tiramisu.asthraappmk2.LocationActivity">
 
     <include
         android:id="@+id/app_bar"
@@ -17,7 +17,11 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></RelativeLayout>
+            android:layout_height="match_parent">
+
+            <!-- Insert Location Layout Here -->
+
+        </RelativeLayout>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/drawerList"

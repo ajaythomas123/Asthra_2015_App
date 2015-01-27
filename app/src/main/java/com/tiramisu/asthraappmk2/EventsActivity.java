@@ -1,60 +1,41 @@
 package com.tiramisu.asthraappmk2;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.ArrayList;
-
-import it.gmariotti.cardslib.library.cards.material.MaterialLargeImageCard;
-import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardExpand;
-import it.gmariotti.cardslib.library.internal.ViewToClickToExpand;
-import it.gmariotti.cardslib.library.recyclerview.internal.CardArrayRecyclerViewAdapter;
-import it.gmariotti.cardslib.library.recyclerview.view.CardRecyclerView;
+import it.neokree.materialtabs.MaterialTab;
+import it.neokree.materialtabs.MaterialTabHost;
+import it.neokree.materialtabs.MaterialTabListener;
 
 
-public class EventsActivity extends BaseActivity {
-    MaterialLargeImageCard card;
-    CardExpand expand;
-    String[] stArr = {"Counter Strike: Global Offensive", "DOTA 2"};
-    String[] stSub = {"2:00PM", "3:00PM"};
-    int[] images = {R.drawable.csgo, R.drawable.dota};
+public class EventsActivity extends BaseActivity implements MaterialTabListener {
+    ViewPager viewPager;
+    MaterialTabHost materialTabHost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
         super.onBaseCreate("Events");
-        ArrayList<Card> cards = new ArrayList<Card>();
-        CardRecyclerView mRecyclerView = (CardRecyclerView) findViewById(R.id.carddemo_recyclerview);
-        CardArrayRecyclerViewAdapter mCardArrayAdapter = new CardArrayRecyclerViewAdapter(this, cards);
+        viewPager = (ViewPager) findViewById(R.id.eventsPager);
+        materialTabHost = (MaterialTabHost) findViewById(R.id.materialTabHost);
+        EventPagerAdapter eventPagerAdapter = new EventPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(eventPagerAdapter);
+        viewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+            @Override
+            public void onPageSelected(int position) {
+                materialTabHost.setSelectedNavigationItem(position);
 
+            }
+        });
 
-        ViewToClickToExpand viewToClickToExpand =
-                ViewToClickToExpand.builder()
-                        .highlightView(false)
-                        .setupCardElement(ViewToClickToExpand.CardElementUI.CARD);
-
-        for (int i = 0; i < 2; i++) {
-            card = MaterialLargeImageCard.with(this).useDrawableId(images[i]).setTextOverImage(stArr[i]).build();
-            expand = new CardExpand(this);
-
-            expand.setTitle(stSub[i]);
-
-            card.addCardExpand(expand);
-            cards.add(card);
-
-            cards.get(i).setViewToClickToExpand(viewToClickToExpand);
-        }
-
-        mRecyclerView.setHasFixedSize(false);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        //Set the empty view
-        if (mRecyclerView != null) {
-            mRecyclerView.setAdapter(mCardArrayAdapter);
+        for (int i = 0; i < eventPagerAdapter.getCount(); i++) {
+            materialTabHost.addTab(materialTabHost.newTab().setText(eventPagerAdapter.getPageTitle(i)).setTabListener(this));
         }
     }
 
@@ -85,4 +66,76 @@ public class EventsActivity extends BaseActivity {
         return NAVDRAWER_ITEM_EVENTS;
     }
 
+    @Override
+    public void onTabSelected(MaterialTab materialTab) {
+        viewPager.setCurrentItem(materialTab.getPosition());
+    }
+
+    @Override
+    public void onTabReselected(MaterialTab materialTab) {
+
+    }
+
+    @Override
+    public void onTabUnselected(MaterialTab materialTab) {
+
+    }
+}
+
+class EventPagerAdapter extends FragmentStatePagerAdapter {
+    public EventPagerAdapter(FragmentManager fm) {
+        super(fm);
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        if (position == 0) {
+            return "Applied Electronics & Instrumentation";
+        }
+        if (position == 1) {
+            return "Civil Engineering";
+        }
+        if (position == 2) {
+            return "Computer Science";
+        }
+        if (position == 3) {
+            return "Electronics and Communication";
+        }
+        if (position == 4) {
+            return "Electronics and Electrical";
+        }
+        if (position == 5) {
+            return "Mechanical Engineering";
+        }
+        return null;
+    }
+
+    @Override
+    public Fragment getItem(int position) {
+        Fragment fragment = null;
+        if (position == 0) {
+            fragment = new EventsFragment_AEI();
+        }
+        if (position == 1) {
+            fragment = new EventsFragment_CE();
+        }
+        if (position == 2) {
+            fragment = new EventsFragment_CSE();
+        }
+        if (position == 3) {
+            fragment = new EventsFragment_ECE();
+        }
+        if (position == 4) {
+            fragment = new EventsFragment_EEE();
+        }
+        if (position == 5) {
+            fragment = new EventsFragment_ME();
+        }
+        return fragment;
+    }
+
+    @Override
+    public int getCount() {
+        return 6;
+    }
 }

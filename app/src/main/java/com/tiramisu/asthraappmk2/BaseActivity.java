@@ -28,10 +28,11 @@ import java.util.List;
 public class BaseActivity extends ActionBarActivity {
     public DrawerLayout drawerLayout = null;
     private ActionBarDrawerToggle drawerToggle;
-    protected static final int NAVDRAWER_ITEM_EVENTS = 2;
     protected static final int NAVDRAWER_ITEM_HOME = 1;
+    protected static final int NAVDRAWER_ITEM_EVENTS = 2;
     protected static final int NAVDRAWER_ITEM_REG = 3;
     protected static final int NAVDRAWER_ITEM_INVALID = -1;
+    protected static final int NAVDRAWER_ITEM_LOCATION = 4;
     RecyclerView recyclerView;
     NavDrawerAdapter adapter;
     Toolbar toolbar;
@@ -113,8 +114,8 @@ public class BaseActivity extends ActionBarActivity {
 
     public static List<NavigationDrawerInfo> getData() {
         List<NavigationDrawerInfo> data = new ArrayList<>();
-        int[] icons = {R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder};
-        String[] titles = {"Home", "Events", "Registration"};
+        int[] icons = {R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder};
+        String[] titles = {"Home", "Events", "Registration", "Location"};
         for (int i = 0; i < titles.length; i++) {
             NavigationDrawerInfo current = new NavigationDrawerInfo();
             current.iconId = icons[i];
@@ -141,6 +142,11 @@ public class BaseActivity extends ActionBarActivity {
             case NAVDRAWER_ITEM_REG:
                 intent = new Intent(this, RegistrationActivity.class);
                 startActivity(intent);
+                break;
+
+            case NAVDRAWER_ITEM_LOCATION:
+                intent = new Intent(this, LocationActivity.class);
+                startActivity(intent);
         }
     }
 
@@ -151,7 +157,7 @@ public class BaseActivity extends ActionBarActivity {
 
     public class NavDrawerAdapter extends RecyclerView.Adapter<NavDrawerAdapter.MyViewHolder> {
         private LayoutInflater inflater;
-        BaseActivity baseActivity = new BaseActivity();
+        BaseActivity baseActivity = new BaseActivity();             //Don't delete these two lines.
         private Context context;
         List<NavigationDrawerInfo> data = Collections.emptyList();
 
@@ -203,6 +209,9 @@ public class BaseActivity extends ActionBarActivity {
                 }
                 if (getPosition() == 2) {
                     goToNavDrawerItem(NAVDRAWER_ITEM_REG);
+                }
+                if (getPosition() == 3) {
+                    goToNavDrawerItem(NAVDRAWER_ITEM_LOCATION);
                 }
             }
         }

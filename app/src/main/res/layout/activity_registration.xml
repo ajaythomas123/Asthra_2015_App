@@ -4,7 +4,7 @@
     android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationActivity">
+    tools:context="com.tiramisu.asthraappmk2.RegistrationActivity">
 
     <include
         android:id="@+id/app_bar"
@@ -18,14 +18,14 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </RelativeLayout>
+            android:layout_height="match_parent"></RelativeLayout>
 
-        <android.support.v7.widget.RecyclerView android:id="@+id/drawerList"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/drawerList"
             android:layout_width="280dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:background="@color/white_background"/>
+            android:background="@color/white_background" />
 
 
     </android.support.v4.widget.DrawerLayout>
