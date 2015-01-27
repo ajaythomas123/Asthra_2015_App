@@ -17,9 +17,43 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
 
             <!-- Insert Location Layout Here -->
+
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_below="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/map_title"
+                android:id="@+id/textView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingTop="5dp"
+                android:textSize="30sp"
+                android:textIsSelectable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/map_sub_title"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp" />
+
 
         </RelativeLayout>
 

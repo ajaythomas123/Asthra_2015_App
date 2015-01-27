@@ -13,5 +13,8 @@
     <string name="title_activity_informals">InformalsActivity</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_location">LocationActivity</string>
+    <string name="map_title">Wondering how to reach SJCET ?</string>
+    <string name="map_sub_title">Not to worry! we got all our events mapped out below : </string>
+
 
 </resources>
