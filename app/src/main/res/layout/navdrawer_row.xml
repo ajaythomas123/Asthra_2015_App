@@ -13,7 +13,7 @@
         android:src="@drawable/ic_launcher" />
 
     <TextView
-        android:id="@+id/lisText"
+        android:id="@+id/listText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"

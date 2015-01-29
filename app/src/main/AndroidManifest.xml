@@ -65,7 +65,7 @@
         Also, Dont forget to replace your key for the debug versions !!-->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyAlZ3UonNrh2Naz1U6Q0j65dW6tPq6PLL0"/>
+            android:value="AIzaSyD13l9dEUbr1iAqdopiRzBzYNVxEDi655g"/>
 
     </application>
 

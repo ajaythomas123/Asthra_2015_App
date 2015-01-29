@@ -15,6 +15,23 @@
     <string name="title_activity_location">LocationActivity</string>
     <string name="map_title">Wondering how to reach SJCET ?</string>
     <string name="map_sub_title">Not to worry! we got all our events mapped out below : </string>
+    <string name="spinner_course">Course</string>
+    <string name="spinner_department">Department</string>
 
+    <string-array name="reg_courses">
+        <item>B.Tech</item>
+        <item>M.Tech</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="reg_departments">
+        <item>AEI</item>
+        <item>CE</item>
+        <item>CSE</item>
+        <item>ECE</item>
+        <item>EEE</item>
+        <item>ME</item>
+        <item>Other</item>
+    </string-array>
 
 </resources>

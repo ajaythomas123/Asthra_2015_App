@@ -194,7 +194,7 @@ public class BaseActivity extends ActionBarActivity {
             public MyViewHolder(View itemView) {
                 super(itemView);
                 itemView.setOnClickListener(this);
-                title = (TextView) itemView.findViewById(R.id.lisText);
+                title = (TextView) itemView.findViewById(R.id.listText);
                 icon = (ImageView) itemView.findViewById(R.id.listIcon);
 
             }
