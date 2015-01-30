@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     tools:context="com.tiramisu.asthraappmk2.EventsFragment_CE">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/eventRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_margin="8dp" />
 
 </FrameLayout>

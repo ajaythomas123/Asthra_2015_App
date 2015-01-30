@@ -8,6 +8,9 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import it.neokree.materialtabs.MaterialTab;
 import it.neokree.materialtabs.MaterialTabHost;
 import it.neokree.materialtabs.MaterialTabListener;
@@ -16,12 +19,36 @@ import it.neokree.materialtabs.MaterialTabListener;
 public class EventsActivity extends BaseActivity implements MaterialTabListener {
     ViewPager viewPager;
     MaterialTabHost materialTabHost;
+    List<EventDetails> allEvents = new ArrayList<>();
+    EventDetails eventDetails;
+    /*The following 6 arrays store the details of the events.
+    * Each time you add a new event, make sure you add the required values in the arrays.
+    * The String array called eventIds is the id used to identify the event in the database.*/
+    String[] eventIds = {"AEI1", "AEI2", "CE1", "CE2", "CSE1", "CSE2", "ECE1", "ECE2", "EEE1", "EEE2", "ME1", "ME2"};
+    String[] eventNames = {"AEI Event 1", "AIE Event 2", "CE Event 1", "CE Event 2", "CSE Event 1", "CSE Event 2", "ECE Event 1", "ECE Event 2", "EEE Event 1", "EEE Event 2", "ME Event 1", "ME Event 2"};
+    String[] eventBranches = {"AEI", "AEI", "CE", "CE", "CSE", "CSE", "ECE", "ECE", "EEE", "EEE", "ME", "ME"};
+    String[] eventTimes = {"10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM"};
+    Boolean[] eventSpot = {false, true, false, true, false, true, false, true, false, true, false, true};
+    Boolean[] eventTeam = {false, true, false, true, false, true, false, true, false, true, false, true};
+    int[] eventPosterIds = {R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
         super.onBaseCreate("Events");
+
+        for (int i = 0; i < 12; i++) {
+            eventDetails = new EventDetails();
+            eventDetails.setEventId(eventIds[i]);
+            eventDetails.setEventName(eventNames[i]);
+            eventDetails.setEventBranch(eventBranches[i]);
+            eventDetails.setEventTime(eventTimes[i]);
+            eventDetails.setEventTeam(eventTeam[i]);
+            eventDetails.setEventSpot(eventSpot[i]);
+            eventDetails.setEventPosterId(eventPosterIds[i]);
+            allEvents.add(eventDetails);
+        }
         viewPager = (ViewPager) findViewById(R.id.eventsPager);
         materialTabHost = (MaterialTabHost) findViewById(R.id.materialTabHost);
         EventPagerAdapter eventPagerAdapter = new EventPagerAdapter(getSupportFragmentManager());
@@ -30,7 +57,6 @@ public class EventsActivity extends BaseActivity implements MaterialTabListener 
             @Override
             public void onPageSelected(int position) {
                 materialTabHost.setSelectedNavigationItem(position);
-
             }
         });
 
@@ -131,6 +157,7 @@ class EventPagerAdapter extends FragmentStatePagerAdapter {
         if (position == 5) {
             fragment = new EventsFragment_ME();
         }
+
         return fragment;
     }
 

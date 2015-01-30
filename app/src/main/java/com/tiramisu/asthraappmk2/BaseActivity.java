@@ -33,11 +33,12 @@ public class BaseActivity extends ActionBarActivity {
     protected static final int NAVDRAWER_ITEM_REG = 3;
     protected static final int NAVDRAWER_ITEM_INVALID = -1;
     protected static final int NAVDRAWER_ITEM_LOCATION = 4;
+    ArrayList<EventDetails> allEvents = new ArrayList<>();
+    EventDetails eventDetails;
     RecyclerView recyclerView;
     NavDrawerAdapter adapter;
     Toolbar toolbar;
     int itemId;
-
 
     protected void onBaseCreate(final String toolbarTitle) {
         toolbar = (Toolbar) findViewById(R.id.app_bar);
