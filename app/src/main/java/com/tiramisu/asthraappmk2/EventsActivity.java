@@ -26,7 +26,9 @@ public class EventsActivity extends BaseActivity implements MaterialTabListener 
     * The String array called eventIds is the id used to identify the event in the database.*/
     String[] eventIds = {"AEI1", "AEI2", "CE1", "CE2", "CSE1", "CSE2", "ECE1", "ECE2", "EEE1", "EEE2", "ME1", "ME2"};
     String[] eventNames = {"AEI Event 1", "AIE Event 2", "CE Event 1", "CE Event 2", "CSE Event 1", "CSE Event 2", "ECE Event 1", "ECE Event 2", "EEE Event 1", "EEE Event 2", "ME Event 1", "ME Event 2"};
+    String[] eventDescriptions = new String[12];
     String[] eventBranches = {"AEI", "AEI", "CE", "CE", "CSE", "CSE", "ECE", "ECE", "EEE", "EEE", "ME", "ME"};
+    int[] eventDays = {1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2};
     String[] eventTimes = {"10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM"};
     Boolean[] eventSpot = {false, true, false, true, false, true, false, true, false, true, false, true};
     Boolean[] eventTeam = {false, true, false, true, false, true, false, true, false, true, false, true};
@@ -37,12 +39,14 @@ public class EventsActivity extends BaseActivity implements MaterialTabListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
         super.onBaseCreate("Events");
-
+        eventDescriptions = getResources().getStringArray(R.array.event_descriptions);
         for (int i = 0; i < 12; i++) {
             eventDetails = new EventDetails();
             eventDetails.setEventId(eventIds[i]);
             eventDetails.setEventName(eventNames[i]);
+            eventDetails.setEventDescription(eventDescriptions[i]);
             eventDetails.setEventBranch(eventBranches[i]);
+            eventDetails.setEventDay(eventDays[i]);
             eventDetails.setEventTime(eventTimes[i]);
             eventDetails.setEventTeam(eventTeam[i]);
             eventDetails.setEventSpot(eventSpot[i]);

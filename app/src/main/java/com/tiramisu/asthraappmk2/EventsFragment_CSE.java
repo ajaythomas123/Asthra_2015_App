@@ -16,13 +16,14 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventsFragment_CSE extends Fragment {
+public class EventsFragment_CSE extends Fragment implements ClickListener{
     View view;
     List<EventDetails> cseEvents = new ArrayList<>();
     EventDetails cseEventDetails;
     EventsActivity eventsActivity;
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
+    String[] cseEventDescriptions = new String[12];
 
 
     public EventsFragment_CSE() {
@@ -35,6 +36,7 @@ public class EventsFragment_CSE extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_events_cse, container, false);
         eventsActivity = new EventsActivity();
+        cseEventDescriptions = getResources().getStringArray(R.array.event_descriptions);
         String branch;
         for (int i = 0; i < 12; i++) {
             branch = eventsActivity.eventBranches[i];
@@ -42,7 +44,9 @@ public class EventsFragment_CSE extends Fragment {
                 cseEventDetails = new EventDetails();
                 cseEventDetails.setEventId(eventsActivity.eventIds[i]);
                 cseEventDetails.setEventName(eventsActivity.eventNames[i]);
+                cseEventDetails.setEventDescription(eventsActivity.eventDescriptions[i]);
                 cseEventDetails.setEventBranch(eventsActivity.eventBranches[i]);
+                cseEventDetails.setEventDay(eventsActivity.eventDays[i]);
                 cseEventDetails.setEventTime(eventsActivity.eventTimes[i]);
                 cseEventDetails.setEventTeam(eventsActivity.eventTeam[i]);
                 cseEventDetails.setEventSpot(eventsActivity.eventSpot[i]);
@@ -52,8 +56,14 @@ public class EventsFragment_CSE extends Fragment {
         }
         recyclerView = (RecyclerView) view.findViewById(R.id.eventRecycler);
         eventCardAdapter = new EventCardAdapter(getActivity(), cseEvents);
+        eventCardAdapter.setClickListener(this);
         recyclerView.setAdapter(eventCardAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;
+    }
+
+    @Override
+    public void cardClicked(View view, int position) {
+
     }
 }

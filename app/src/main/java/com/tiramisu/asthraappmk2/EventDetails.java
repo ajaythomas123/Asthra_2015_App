@@ -8,7 +8,9 @@ package com.tiramisu.asthraappmk2;
 public class EventDetails {
     String eventId;
     String eventName;
+    String eventDescription;
     String eventBranch;
+    int eventDay;
     String eventTime;
     int eventPosterId;
     Boolean eventSpot;
@@ -30,12 +32,28 @@ public class EventDetails {
         this.eventName = eventName;
     }
 
+    public String getEventDescription() {
+        return eventDescription;
+    }
+
+    public void setEventDescription(String eventDescription) {
+        this.eventDescription = eventDescription;
+    }
+
     public String getEventBranch() {
         return eventBranch;
     }
 
     public void setEventBranch(String eventBranch) {
         this.eventBranch = eventBranch;
+    }
+
+    public int getEventDay() {
+        return eventDay;
+    }
+
+    public void setEventDay(int eventDay) {
+        this.eventDay = eventDay;
     }
 
     public String getEventTime() {

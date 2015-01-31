@@ -18,6 +18,7 @@ public class EventCardAdapter extends RecyclerView.Adapter<EventCardAdapter.Even
     public LayoutInflater inflater;
     List<EventDetails> eventDetails = Collections.emptyList();
     Context context;
+    ClickListener clickListener;
 
 
     public EventCardAdapter(Context context, List<EventDetails> eventDetails) {
@@ -45,7 +46,11 @@ public class EventCardAdapter extends RecyclerView.Adapter<EventCardAdapter.Even
         return eventDetails.size();
     }
 
-    class EventViewHolder extends RecyclerView.ViewHolder {
+    public void setClickListener(ClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
+
+    class EventViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView eventName;
         ImageView eventPoster;
 
@@ -53,6 +58,14 @@ public class EventCardAdapter extends RecyclerView.Adapter<EventCardAdapter.Even
             super(itemView);
             eventName = (TextView) itemView.findViewById(R.id.eventName);
             eventPoster = (ImageView) itemView.findViewById(R.id.eventImage);
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if(clickListener != null){
+                clickListener.cardClicked(v, getPosition());
+            }
         }
     }
 }

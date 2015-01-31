@@ -1,6 +1,7 @@
 package com.tiramisu.asthraappmk2;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,13 +19,15 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventsFragment_AEI extends Fragment {
+public class EventsFragment_AEI extends Fragment implements ClickListener{
     View view;
     List<EventDetails> aeiEvents;
     EventDetails aeiEventDetails;
     EventsActivity eventsActivity;
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
+    String[] aeiEventDescriptions = new String[12];
+
 
     public EventsFragment_AEI() {
         // Required empty public constructor
@@ -36,6 +40,7 @@ public class EventsFragment_AEI extends Fragment {
         view = inflater.inflate(R.layout.fragment_events_aei, container, false);
         aeiEvents = new ArrayList<>();
         eventsActivity = new EventsActivity();
+        aeiEventDescriptions = getResources().getStringArray(R.array.event_descriptions);
         String branch;
         for (int i = 0; i < 12; i++) {
             branch = eventsActivity.eventBranches[i];
@@ -43,7 +48,9 @@ public class EventsFragment_AEI extends Fragment {
                 aeiEventDetails = new EventDetails();
                 aeiEventDetails.setEventId(eventsActivity.eventIds[i]);
                 aeiEventDetails.setEventName(eventsActivity.eventNames[i]);
+                aeiEventDetails.setEventDescription(aeiEventDescriptions[i]);
                 aeiEventDetails.setEventBranch(eventsActivity.eventBranches[i]);
+                aeiEventDetails.setEventDay(eventsActivity.eventDays[i]);
                 aeiEventDetails.setEventTime(eventsActivity.eventTimes[i]);
                 aeiEventDetails.setEventTeam(eventsActivity.eventTeam[i]);
                 aeiEventDetails.setEventSpot(eventsActivity.eventSpot[i]);
@@ -51,11 +58,16 @@ public class EventsFragment_AEI extends Fragment {
                 aeiEvents.add(aeiEventDetails);
             }
         }
-        Log.d("Ajay", aeiEvents.get(0).getEventName() + aeiEvents.get(1).getEventName());
         recyclerView = (RecyclerView) view.findViewById(R.id.eventRecycler);
         eventCardAdapter = new EventCardAdapter(getActivity(), aeiEvents);
+        eventCardAdapter.setClickListener(this);
         recyclerView.setAdapter(eventCardAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;
+    }
+
+    @Override
+    public void cardClicked(View view, int position) {
+
     }
 }

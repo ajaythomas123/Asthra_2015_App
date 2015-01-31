@@ -1,7 +1,6 @@
 package com.tiramisu.asthraappmk2;
 
 import android.os.Bundle;
-import android.support.v7.internal.widget.AdapterViewCompat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,10 +31,6 @@ Spinner courseSpinner;
         deptSpinner.setOnItemSelectedListener(this);
 
         //I'll add the rest in the next commit.
-
-
-
-
 
     }
 

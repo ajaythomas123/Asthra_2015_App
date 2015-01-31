@@ -16,13 +16,14 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventsFragment_CE extends Fragment {
+public class EventsFragment_CE extends Fragment implements ClickListener{
     View view;
     List<EventDetails> ceEvents;
     EventDetails ceEventDetails;
     EventsActivity eventsActivity;
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
+    String[] ceEventDescriptions = new String[12];
 
     public EventsFragment_CE() {
         // Required empty public constructor
@@ -35,6 +36,7 @@ public class EventsFragment_CE extends Fragment {
         view = inflater.inflate(R.layout.fragment_events_ce, container, false);
         ceEvents = new ArrayList<>();
         eventsActivity = new EventsActivity();
+        ceEventDescriptions = getResources().getStringArray(R.array.event_descriptions);
         String branch;
         for (int i = 0; i < 12; i++) {
             branch = eventsActivity.eventBranches[i];
@@ -42,7 +44,9 @@ public class EventsFragment_CE extends Fragment {
                 ceEventDetails = new EventDetails();
                 ceEventDetails.setEventId(eventsActivity.eventIds[i]);
                 ceEventDetails.setEventName(eventsActivity.eventNames[i]);
+                ceEventDetails.setEventDescription(eventsActivity.eventDescriptions[i]);
                 ceEventDetails.setEventBranch(eventsActivity.eventBranches[i]);
+                ceEventDetails.setEventDay(eventsActivity.eventDays[i]);
                 ceEventDetails.setEventTime(eventsActivity.eventTimes[i]);
                 ceEventDetails.setEventTeam(eventsActivity.eventTeam[i]);
                 ceEventDetails.setEventSpot(eventsActivity.eventSpot[i]);
@@ -52,8 +56,14 @@ public class EventsFragment_CE extends Fragment {
         }
         recyclerView = (RecyclerView) view.findViewById(R.id.eventRecycler);
         eventCardAdapter = new EventCardAdapter(getActivity(), ceEvents);
+        eventCardAdapter.setClickListener(this);
         recyclerView.setAdapter(eventCardAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;
+    }
+
+    @Override
+    public void cardClicked(View view, int position) {
+
     }
 }
