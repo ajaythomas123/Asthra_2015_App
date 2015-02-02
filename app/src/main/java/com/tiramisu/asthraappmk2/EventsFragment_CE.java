@@ -1,6 +1,7 @@
 package com.tiramisu.asthraappmk2;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -44,7 +45,7 @@ public class EventsFragment_CE extends Fragment implements ClickListener{
                 ceEventDetails = new EventDetails();
                 ceEventDetails.setEventId(eventsActivity.eventIds[i]);
                 ceEventDetails.setEventName(eventsActivity.eventNames[i]);
-                ceEventDetails.setEventDescription(eventsActivity.eventDescriptions[i]);
+                ceEventDetails.setEventDescription(ceEventDescriptions[i]);
                 ceEventDetails.setEventBranch(eventsActivity.eventBranches[i]);
                 ceEventDetails.setEventDay(eventsActivity.eventDays[i]);
                 ceEventDetails.setEventTime(eventsActivity.eventTimes[i]);
@@ -64,6 +65,15 @@ public class EventsFragment_CE extends Fragment implements ClickListener{
 
     @Override
     public void cardClicked(View view, int position) {
+        Intent intent = new Intent(getActivity(), EventInfoActivity.class);
 
+        intent.putExtra("eventId", ceEvents.get(position).getEventId());
+        intent.putExtra("eventName", ceEvents.get(position).getEventName());
+        intent.putExtra("eventDescription", ceEvents.get(position).getEventDescription());
+        intent.putExtra("eventBranch", ceEvents.get(position).getEventBranch());
+        intent.putExtra("eventDay", ceEvents.get(position).getEventDay());
+        intent.putExtra("eventTime", ceEvents.get(position).getEventTime());
+
+        startActivity(intent);
     }
 }

@@ -1,6 +1,7 @@
 package com.tiramisu.asthraappmk2;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,7 +17,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventsFragment_ME extends Fragment implements ClickListener{
+public class EventsFragment_ME extends Fragment implements ClickListener {
     View view;
     List<EventDetails> meEvents = new ArrayList<>();
     EventDetails meEventDetails;
@@ -43,7 +44,7 @@ public class EventsFragment_ME extends Fragment implements ClickListener{
                 meEventDetails = new EventDetails();
                 meEventDetails.setEventId(eventsActivity.eventIds[i]);
                 meEventDetails.setEventName(eventsActivity.eventNames[i]);
-                meEventDetails.setEventDescription(eventsActivity.eventDescriptions[i]);
+                meEventDetails.setEventDescription(meEventDescriptions[i]);
                 meEventDetails.setEventBranch(eventsActivity.eventBranches[i]);
                 meEventDetails.setEventDay(eventsActivity.eventDays[i]);
                 meEventDetails.setEventTime(eventsActivity.eventTimes[i]);
@@ -64,6 +65,15 @@ public class EventsFragment_ME extends Fragment implements ClickListener{
 
     @Override
     public void cardClicked(View view, int position) {
+        Intent intent = new Intent(getActivity(), EventInfoActivity.class);
 
+        intent.putExtra("eventId", meEvents.get(position).getEventId());
+        intent.putExtra("eventName", meEvents.get(position).getEventName());
+        intent.putExtra("eventDescription", meEvents.get(position).getEventDescription());
+        intent.putExtra("eventBranch", meEvents.get(position).getEventBranch());
+        intent.putExtra("eventDay", meEvents.get(position).getEventDay());
+        intent.putExtra("eventTime", meEvents.get(position).getEventTime());
+
+        startActivity(intent);
     }
 }

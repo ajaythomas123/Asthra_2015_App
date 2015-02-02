@@ -6,11 +6,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +17,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventsFragment_AEI extends Fragment implements ClickListener{
+public class EventsFragment_AEI extends Fragment implements ClickListener {
     View view;
     List<EventDetails> aeiEvents;
     EventDetails aeiEventDetails;
@@ -27,7 +25,6 @@ public class EventsFragment_AEI extends Fragment implements ClickListener{
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
     String[] aeiEventDescriptions = new String[12];
-
 
     public EventsFragment_AEI() {
         // Required empty public constructor
@@ -68,6 +65,15 @@ public class EventsFragment_AEI extends Fragment implements ClickListener{
 
     @Override
     public void cardClicked(View view, int position) {
+        Intent intent = new Intent(getActivity(), EventInfoActivity.class);
 
+        intent.putExtra("eventId", aeiEvents.get(position).getEventId());
+        intent.putExtra("eventName", aeiEvents.get(position).getEventName());
+        intent.putExtra("eventDescription", aeiEvents.get(position).getEventDescription());
+        intent.putExtra("eventBranch", aeiEvents.get(position).getEventBranch());
+        intent.putExtra("eventDay", aeiEvents.get(position).getEventDay());
+        intent.putExtra("eventTime", aeiEvents.get(position).getEventTime());
+
+        startActivity(intent);
     }
 }

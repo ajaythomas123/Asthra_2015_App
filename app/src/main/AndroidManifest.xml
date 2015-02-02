@@ -44,6 +44,13 @@
                 android:value="com.tiramisu.asthraappmk2.MainActivity" />
         </activity>
         <activity
+            android:name=".EventInfoActivity"
+            android:label="@string/title_activity_event_info" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tiramisu.asthraappmk2.EventsActivity" />
+        </activity>
+        <activity
             android:name=".InformalsActivity"
             android:label="@string/title_activity_informals" >
             <meta-data
@@ -65,10 +72,7 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyD13l9dEUbr1iAqdopiRzBzYNVxEDi655g" />
 
-        <activity
-            android:name=".EventInfoActivity"
-            android:label="@string/title_activity_event_info" >
-        </activity>
+
     </application>
 
 </manifest>

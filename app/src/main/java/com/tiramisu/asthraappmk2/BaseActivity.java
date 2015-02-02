@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -54,6 +55,7 @@ public class BaseActivity extends ActionBarActivity {
 
 
         } else {
+            Log.d("Jelly", "bean");
             drawerLayout = (DrawerLayout) this.findViewById(R.id.drawer_layout);
             drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close) {
                 public void onDrawerClosed(View view) {
@@ -115,7 +117,7 @@ public class BaseActivity extends ActionBarActivity {
 
     public static List<NavigationDrawerInfo> getData() {
         List<NavigationDrawerInfo> data = new ArrayList<>();
-        int[] icons = {R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder};
+        int[] icons = {R.drawable.placeholder, R.drawable.placeholder, R.drawable.placeholder, R.drawable.ic_location_on_grey600_24dp};
         String[] titles = {"Home", "Events", "Registration", "Location"};
         for (int i = 0; i < titles.length; i++) {
             NavigationDrawerInfo current = new NavigationDrawerInfo();

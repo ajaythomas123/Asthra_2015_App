@@ -1,18 +1,34 @@
 package com.tiramisu.asthraappmk2;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class EventInfoActivity extends BaseActivity {
+    TextView descriptionTextView;
+    String eventId, eventName, eventDescription, eventBranch, eventTime;
+    Boolean eventSpot, eventTeam;
+    int eventDay, eventPosterId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_info);
-        onBaseCreate("");
+        super.onBaseCreate("");
+        descriptionTextView = (TextView) findViewById(R.id.eventDescription);
+        Intent intent = getIntent();
+        eventId = intent.getStringExtra("eventId");
+        eventName = intent.getStringExtra("eventName");
+        eventDescription = intent.getStringExtra("eventDescription");
+        eventBranch = intent.getStringExtra("eventBranch");
+        eventTime = intent.getStringExtra("eventTime");
+        toolbar.setTitle(eventName);
+        descriptionTextView.setText(eventDescription);
 
     }
 
@@ -41,6 +57,6 @@ public class EventInfoActivity extends BaseActivity {
 
     @Override
     protected int getSelfNavDrawerItem() {
-        return NAVDRAWER_ITEM_INVALID;
+        return NAVDRAWER_ITEM_EVENTS;
     }
 }

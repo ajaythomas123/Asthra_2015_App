@@ -19,7 +19,6 @@ import it.neokree.materialtabs.MaterialTabListener;
 public class EventsActivity extends BaseActivity implements MaterialTabListener {
     ViewPager viewPager;
     MaterialTabHost materialTabHost;
-    List<EventDetails> allEvents = new ArrayList<>();
     EventDetails eventDetails;
     /*The following 6 arrays store the details of the events.
     * Each time you add a new event, make sure you add the required values in the arrays.
