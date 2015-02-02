@@ -106,6 +106,14 @@
                 android:layout_below="@id/reg_phone"
                 android:hint="Year" />
 
+            <Button
+                android:id="@+id/reg_button"
+                android:layout_below="@id/reg_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_centerHorizontal="true"/>
+
 
         </RelativeLayout>
 

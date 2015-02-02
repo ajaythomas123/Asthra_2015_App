@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/regListItem"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:padding="8dp"
+    android:background="@color/white_background">
+
+    <TextView
+        android:id="@+id/eventName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Event Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+</RelativeLayout>

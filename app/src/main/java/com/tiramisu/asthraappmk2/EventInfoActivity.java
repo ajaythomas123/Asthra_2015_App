@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
 public class EventInfoActivity extends BaseActivity {
     TextView descriptionTextView;
+    ImageView eventImage;
     String eventId, eventName, eventDescription, eventBranch, eventTime;
     Boolean eventSpot, eventTeam;
     int eventDay, eventPosterId;
@@ -21,14 +23,21 @@ public class EventInfoActivity extends BaseActivity {
         setContentView(R.layout.activity_event_info);
         super.onBaseCreate("");
         descriptionTextView = (TextView) findViewById(R.id.eventDescription);
+        eventImage = (ImageView) findViewById(R.id.eventImage);
         Intent intent = getIntent();
         eventId = intent.getStringExtra("eventId");
         eventName = intent.getStringExtra("eventName");
         eventDescription = intent.getStringExtra("eventDescription");
         eventBranch = intent.getStringExtra("eventBranch");
         eventTime = intent.getStringExtra("eventTime");
+        eventTeam = intent.getBooleanExtra("eventTeam", true);
+        eventSpot = intent.getBooleanExtra("eventSpot", false);
+        eventDay = intent.getIntExtra("eventDay", 1);
+        eventPosterId = intent.getIntExtra("eventPosterId", R.drawable.csgo);
+
         toolbar.setTitle(eventName);
         descriptionTextView.setText(eventDescription);
+        eventImage.setImageResource(eventPosterId);
 
     }
 

@@ -63,7 +63,7 @@ public class EventsFragment_EEE extends Fragment implements ClickListener {
     }
 
     @Override
-    public void cardClicked(View view, int position) {
+    public void itemClicked(View view, int position) {
         Intent intent = new Intent(getActivity(), EventInfoActivity.class);
 
         intent.putExtra("eventId", eeeEvents.get(position).getEventId());
@@ -72,6 +72,9 @@ public class EventsFragment_EEE extends Fragment implements ClickListener {
         intent.putExtra("eventBranch", eeeEvents.get(position).getEventBranch());
         intent.putExtra("eventDay", eeeEvents.get(position).getEventDay());
         intent.putExtra("eventTime", eeeEvents.get(position).getEventTime());
+        intent.putExtra("eventTeam", eeeEvents.get(position).getEventTeam());
+        intent.putExtra("eventSpot", eeeEvents.get(position).getEventSpot());
+        intent.putExtra("eventPosterId", eeeEvents.get(position).getEventPosterId());
 
         startActivity(intent);
     }

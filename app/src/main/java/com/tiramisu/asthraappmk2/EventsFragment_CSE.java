@@ -64,7 +64,7 @@ public class EventsFragment_CSE extends Fragment implements ClickListener {
     }
 
     @Override
-    public void cardClicked(View view, int position) {
+    public void itemClicked(View view, int position) {
         Intent intent = new Intent(getActivity(), EventInfoActivity.class);
 
         intent.putExtra("eventId", cseEvents.get(position).getEventId());
@@ -73,6 +73,9 @@ public class EventsFragment_CSE extends Fragment implements ClickListener {
         intent.putExtra("eventBranch", cseEvents.get(position).getEventBranch());
         intent.putExtra("eventDay", cseEvents.get(position).getEventDay());
         intent.putExtra("eventTime", cseEvents.get(position).getEventTime());
+        intent.putExtra("eventTeam", cseEvents.get(position).getEventTeam());
+        intent.putExtra("eventSpot", cseEvents.get(position).getEventSpot());
+        intent.putExtra("eventPosterId", cseEvents.get(position).getEventPosterId());
 
         startActivity(intent);
     }

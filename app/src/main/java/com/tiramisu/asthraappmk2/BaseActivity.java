@@ -143,7 +143,7 @@ public class BaseActivity extends ActionBarActivity {
                 break;
 
             case NAVDRAWER_ITEM_REG:
-                intent = new Intent(this, RegistrationActivity.class);
+                intent = new Intent(this, RegistrationListActivity.class);
                 startActivity(intent);
                 break;
 

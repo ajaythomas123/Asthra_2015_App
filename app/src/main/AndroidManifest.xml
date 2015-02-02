@@ -37,11 +37,18 @@
                 android:value="com.tiramisu.asthraappmk2.MainActivity" />
         </activity>
         <activity
+            android:name=".RegistrationListActivity"
+            android:label="@string/title_activity_registration_list" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tiramisu.asthraappmk2.MainActivity" />
+        </activity>
+        <activity
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registration" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tiramisu.asthraappmk2.MainActivity" />
+                android:value="com.tiramisu.asthraappmk2.RegistrationListActivity" />
         </activity>
         <activity
             android:name=".EventInfoActivity"
