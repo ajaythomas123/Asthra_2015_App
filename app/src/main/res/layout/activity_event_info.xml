@@ -15,6 +15,9 @@
         android:layout_height="match_parent"
         android:layout_below="@id/app_bar">
 
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -22,29 +25,27 @@
             <ImageView
                 android:id="@+id/eventImage"
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
+                android:layout_height="200dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/csgo"/>
 
-            <ScrollView
-                android:id="@+id/eventInfo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/eventImage"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:paddingTop="8dp">
 
                 <TextView
                     android:id="@+id/eventDescription"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="Description"
+                    android:layout_below="@id/eventImage"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
-            </ScrollView>
+
         </RelativeLayout>
+        </ScrollView>
+
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/drawerList"
@@ -55,6 +56,7 @@
 
 
     </android.support.v4.widget.DrawerLayout>
+
 
 
 </RelativeLayout>

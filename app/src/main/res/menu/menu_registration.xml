@@ -2,6 +2,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.tiramisu.asthraappmk2.RegistrationActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+
+<!--
+Dude! i can explain this mess!! err.. its bcoz you can define buttons in both xml and in java i took this approach, u just check whihc is better.
+i am muting this codde for now! and using on Options selected for  now! Note: This is for the "done" button on the action toolbar.!
+
+    <item android:id="@+id/action_donereg" android:title="@string/done"
+        android:orderInCategory="100" app:showAsAction="always" android:onClick="doReg"/>
+-->
 </menu>

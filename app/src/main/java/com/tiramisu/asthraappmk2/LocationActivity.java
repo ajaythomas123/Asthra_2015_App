@@ -44,7 +44,7 @@ public class LocationActivity extends BaseActivity implements OnMapReadyCallback
         /*
         * Da,
         * Here we will manually need to add markers for events. okay.
-        * I had enuff of dynamic map s***t , so we will stick with the regualr static style.!
+        * I had enuff of dynamic map s***t , so we will stick with the regular static style.!
         * */
     }
 

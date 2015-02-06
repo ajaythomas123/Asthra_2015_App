@@ -16,6 +16,7 @@ public class EventInfoActivity extends BaseActivity {
     String eventId, eventName, eventDescription, eventBranch, eventTime;
     Boolean eventSpot, eventTeam;
     int eventDay, eventPosterId;
+    MenuItem item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,29 @@ public class EventInfoActivity extends BaseActivity {
         descriptionTextView.setText(eventDescription);
         eventImage.setImageResource(eventPosterId);
 
+        //A small stunt here. look into this later TODO
+/*        if(eventSpot) {
+            item.setVisible(false);
+        }
+*/
+
+    }
+
+    public void startReg(){
+
+
+            Intent intent = new Intent(this, RegistrationActivity.class);
+            intent.putExtra("eventId", eventId);
+            intent.putExtra("eventName", eventName);
+            intent.putExtra("eventDescription", eventDescription);
+            intent.putExtra("eventBranch", eventBranch);
+            intent.putExtra("eventDay", eventDay);
+            intent.putExtra("eventTime", eventTime);
+            intent.putExtra("eventTeam", eventTeam);
+            intent.putExtra("eventSpot", eventSpot);
+            intent.putExtra("eventPosterId", eventPosterId);
+            startActivity(intent);
+
     }
 
 
@@ -46,7 +70,13 @@ public class EventInfoActivity extends BaseActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_event_info, menu);
-        return true;
+
+        if(!eventSpot) {
+            item = menu.add(Menu.NONE, R.id.action_NewReg, Menu.NONE, R.string.reg);
+            item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        }
+
+            return true;
     }
 
     @Override
@@ -56,10 +86,17 @@ public class EventInfoActivity extends BaseActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+
+
+        if (id == R.id.action_NewReg) {
+
+
+                startReg();
+
+
             return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }
