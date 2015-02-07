@@ -117,7 +117,7 @@ public class BaseActivity extends ActionBarActivity {
 
     public static List<NavigationDrawerInfo> getData() {
         List<NavigationDrawerInfo> data = new ArrayList<>();
-        int[] icons = {R.drawable.placeholder, R.drawable.placeholder, R.drawable.ic_register_grey_24dp, R.drawable.ic_location_on_grey600_24dp};
+        int[] icons = {R.drawable.ic_home_grey600_24dp, R.drawable.ic_event_grey600_24dp, R.drawable.ic_register_grey_24dp, R.drawable.ic_location_on_grey600_24dp};
         String[] titles = {"Home", "Events", "Registration", "Location"};
         for (int i = 0; i < titles.length; i++) {
             NavigationDrawerInfo current = new NavigationDrawerInfo();

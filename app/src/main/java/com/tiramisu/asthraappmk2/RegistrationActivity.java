@@ -240,7 +240,7 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
             pDialog = new ProgressDialog(RegistrationActivity.this);
             Log.d("Inside AttemptReg()", "OnPreExec Dialog Made");
             pDialog.setMessage("Registration: Getting you in...");
-            pDialog.setIndeterminate(false);
+            //pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
             pDialog.show();
 
