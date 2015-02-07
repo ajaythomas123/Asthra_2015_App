@@ -52,13 +52,13 @@
 
     <string name="title_activity_registration_list">RegistrationListActivity</string>
     <string name="phone">Enter Mobile Number</string>
-    <string name="name">Enter your Full name</string>
+    <string name="name">Enter Full Name</string>
     <string name="email">Email ID</string>
-    <string name="member">Name of Team Member</string>
+    <string name="member">Member Name</string>
     <string name="team">Give a Team Name</string>
-    <string name="text_team">Enter the details of your team </string>
+    <string name="text_team">Team Details</string>
     <string name="dept">Department</string>
-    <string name="college">Your College Name</string>
+    <string name="college">Enter College Name</string>
     <string name="event">Event</string>
     <string name="year">Year / Semester</string>
     <string name="course">Course</string>

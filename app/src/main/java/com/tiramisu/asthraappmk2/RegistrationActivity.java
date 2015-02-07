@@ -104,6 +104,7 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
         teamContainer.setVisibility(View.VISIBLE);
 
         //TODO: There is  some problem here. the team menu does not always work out !
+        //Fixed this - Ajay Thomas
         if(!eventTeam) {
             teamContainer.setVisibility(View.GONE);
         }
@@ -149,7 +150,7 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
             //TODO: Get VAlue from spinners... using dummy values for now!
             //TODO #2: I am Passing a lot of null values as args, like that of the members. Its dangerous, we need to look into this later on:
 
-            new AttemptReg().execute(eventId, eventName, studName.getText().toString(), studCollege.getText().toString(), "course", "dept", studEmail.getText().toString(),
+            new AttemptReg().execute(eventId, eventName, studName.getText().toString(), studCollege.getText().toString(), courseSpinnerText, deptSpinnerText, studEmail.getText().toString(),
                     studPhone.getText().toString(), studYear.getText().toString(), String.valueOf(eventTeam), studTeam.getText().toString(),
                     studTeam_member1.getText().toString(), studTeam_member2.getText().toString(), studTeam_member3.getText().toString(), studTeam_member4.getText().toString());
         }
@@ -163,7 +164,8 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_registration, menu);
         MenuItem item = menu.add(Menu.NONE, R.id.action_donereg,Menu.NONE,R.string.done);
-        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        item.setIcon(R.drawable.ic_done_white_24dp);
+        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
         return true;
     }
@@ -194,10 +196,10 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
 
         if (parent.getId() == R.id.reg_course)
             courseSpinnerText = courseSpinner.getSelectedItem().toString();         //Value in the Course dropdown list
-            Toast.makeText(this, courseSpinnerText, Toast.LENGTH_SHORT).show();
+
         if (parent.getId() == R.id.reg_department)
             deptSpinnerText = deptSpinner.getSelectedItem().toString();             //Value in the Department Dropdown list
-            Toast.makeText(this, deptSpinnerText, Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
@@ -273,6 +275,7 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
             String member2_Asyncdata = args[12];
             String member3_Asyncdata = args[13];
             String member4_Asyncdata = args[14];
+            //Log.d("Team", member1_Asyncdata + member2_Asyncdata + member3_Asyncdata +member4_Asyncdata);
 
 
 
@@ -324,13 +327,13 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
                   params.add(new BasicNameValuePair("Member1", member1_Asyncdata));
               }
               if (member2_Asyncdata != null && !member2_Asyncdata.isEmpty()) {
-                  params.add(new BasicNameValuePair("Member2", member1_Asyncdata));
+                  params.add(new BasicNameValuePair("Member2", member2_Asyncdata));
               }
               if (member3_Asyncdata != null && !member3_Asyncdata.isEmpty()) {
-                  params.add(new BasicNameValuePair("Member3", member1_Asyncdata));
+                  params.add(new BasicNameValuePair("Member3", member3_Asyncdata));
               }
               if (member4_Asyncdata != null && !member4_Asyncdata.isEmpty()) {
-                  params.add(new BasicNameValuePair("Member4", member1_Asyncdata));
+                  params.add(new BasicNameValuePair("Member4", member4_Asyncdata));
               }
 
           }

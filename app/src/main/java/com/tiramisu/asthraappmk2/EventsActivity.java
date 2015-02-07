@@ -30,7 +30,7 @@ public class EventsActivity extends BaseActivity implements MaterialTabListener 
     int[] eventDays = {1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2};
     String[] eventTimes = {"10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM"};
     Boolean[] eventSpot = {false, true, false, true, false, true, false, true, false, true, false, true};
-    Boolean[] eventTeam = {false, true, false, true, false, true, false, true, false, true, false, true};
+    Boolean[] eventTeam = {true, true, false, true, false, true, false, true, false, true, false, true};
     int[] eventPosterIds = {R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event};
 
     @Override

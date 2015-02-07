@@ -73,7 +73,8 @@ public class EventInfoActivity extends BaseActivity {
 
         if(!eventSpot) {
             item = menu.add(Menu.NONE, R.id.action_NewReg, Menu.NONE, R.string.reg);
-            item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+            item.setIcon(R.drawable.ic_register_white_24dp);
+            item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         }
 
             return true;
