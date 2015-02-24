@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tiramisu.asthraappmk2.ContactUs">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/studCordHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/student_coordinators"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <TextView
+                android:id="@+id/studCord1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/name_studcord1"
+                android:layout_below="@id/studCordHead"/>
+            <TextView
+                android:id="@+id/studCord2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/name_studcord2"
+                android:layout_below="@id/studCord1"/>
+
+            <TextView
+                android:id="@+id/staffCordHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/staff_coordinator"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@id/studCord2"/>
+            <TextView
+                android:id="@+id/staffCord1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/name_staffcord"
+                android:layout_below="@id/staffCordHead"/>
+
+            <TextView
+                android:id="@+id/asthraEmailHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/asthra_email_heading"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@id/staffCord1"/>
+            <TextView
+                android:id="@+id/asthraEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/asthra_email"
+                android:layout_below="@id/asthraEmailHead"/>
+
+
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/drawerList"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white_background" />
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>

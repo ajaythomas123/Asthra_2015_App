@@ -71,11 +71,13 @@ public class EventInfoActivity extends BaseActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_event_info, menu);
 
+        /*Hiding the Register Button
         if(!eventSpot) {
             item = menu.add(Menu.NONE, R.id.action_NewReg, Menu.NONE, R.string.reg);
             item.setIcon(R.drawable.ic_register_white_24dp);
             item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         }
+        */
 
             return true;
     }

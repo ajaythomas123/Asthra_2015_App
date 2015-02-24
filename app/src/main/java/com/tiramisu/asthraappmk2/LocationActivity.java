@@ -53,7 +53,8 @@ public class LocationActivity extends BaseActivity implements OnMapReadyCallback
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_location, menu);
+        /*Hiding action bar buttons*/
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

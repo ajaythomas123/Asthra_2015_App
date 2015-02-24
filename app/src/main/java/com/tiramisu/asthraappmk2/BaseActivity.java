@@ -34,6 +34,8 @@ public class BaseActivity extends ActionBarActivity {
     protected static final int NAVDRAWER_ITEM_REG = 3;
     protected static final int NAVDRAWER_ITEM_INVALID = -1;
     protected static final int NAVDRAWER_ITEM_LOCATION = 4;
+    protected static final int NAVDRAWER_ITEM_CONTACTUS = 5;
+    protected static final int NAVDRAWER_ITEM_ABOUTUS = 6;
     ArrayList<EventDetails> allEvents = new ArrayList<>();
     EventDetails eventDetails;
     RecyclerView recyclerView;
@@ -114,11 +116,15 @@ public class BaseActivity extends ActionBarActivity {
         super.onConfigurationChanged(newConfig);
         drawerToggle.onConfigurationChanged(newConfig);
     }
-
+    /*I'm hiding the registration activity from the navigation bar*/
     public static List<NavigationDrawerInfo> getData() {
         List<NavigationDrawerInfo> data = new ArrayList<>();
+        /*These two lines have been commented so as to hide the registration activity from the navigation drawer
         int[] icons = {R.drawable.ic_home_grey600_24dp, R.drawable.ic_event_grey600_24dp, R.drawable.ic_register_grey_24dp, R.drawable.ic_location_on_grey600_24dp};
         String[] titles = {"Home", "Events", "Registration", "Location"};
+        */
+        int[] icons = {R.drawable.ic_home_grey600_24dp, R.drawable.ic_event_grey600_24dp, R.drawable.ic_location_on_grey600_24dp, R.drawable.ic_contact_us_24dp, R.drawable.ic_info_grey600_24dp};
+        String[] titles = {"Home", "Events", "Location", "Contact Us", "About Us"};
         for (int i = 0; i < titles.length; i++) {
             NavigationDrawerInfo current = new NavigationDrawerInfo();
             current.iconId = icons[i];
@@ -149,6 +155,16 @@ public class BaseActivity extends ActionBarActivity {
 
             case NAVDRAWER_ITEM_LOCATION:
                 intent = new Intent(this, LocationActivity.class);
+                startActivity(intent);
+                break;
+
+            case NAVDRAWER_ITEM_CONTACTUS:
+                intent = new Intent(this, ContactUs.class);
+                startActivity(intent);
+                break;
+
+            case NAVDRAWER_ITEM_ABOUTUS:
+                intent = new Intent(this, AboutUs.class);
                 startActivity(intent);
         }
     }
@@ -210,11 +226,19 @@ public class BaseActivity extends ActionBarActivity {
                 if (getPosition() == 1) {
                     goToNavDrawerItem(NAVDRAWER_ITEM_EVENTS);
                 }
+                /* Hiding RegistrationActivity here
                 if (getPosition() == 2) {
                     goToNavDrawerItem(NAVDRAWER_ITEM_REG);
                 }
-                if (getPosition() == 3) {
+                */
+                if (getPosition() == 2) {
                     goToNavDrawerItem(NAVDRAWER_ITEM_LOCATION);
+                }
+                if (getPosition() == 3) {
+                    goToNavDrawerItem(NAVDRAWER_ITEM_CONTACTUS);
+                }
+                if (getPosition() == 4) {
+                    goToNavDrawerItem(NAVDRAWER_ITEM_ABOUTUS);
                 }
             }
         }

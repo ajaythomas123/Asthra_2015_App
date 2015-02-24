@@ -1,17 +1,18 @@
 package com.tiramisu.asthraappmk2;
 
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class InformalsActivity extends BaseActivity {
+public class ContactUs extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_informals);
-        super.onBaseCreate("Informals");
+        setContentView(R.layout.activity_contact_us);
+        super.onBaseCreate("Contact Us");
     }
 
 
@@ -36,5 +37,9 @@ public class InformalsActivity extends BaseActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    protected int getSelfNavDrawerItem() {
+        return NAVDRAWER_ITEM_CONTACTUS;
     }
 }

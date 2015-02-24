@@ -71,6 +71,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.tiramisu.asthraappmk2.MainActivity" />
         </activity>
+        <activity
+            android:name=".ContactUs"
+            android:label="@string/title_activity_contact_us" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tiramisu.asthraappmk2.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AboutUs"
+            android:label="@string/title_activity_about_us" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tiramisu.asthraappmk2.MainActivity" />
+        </activity>
         <!--
         This Part should be kept last!
         Also, Dont forget to replace your key for the debug versions !!
@@ -78,8 +92,6 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyD13l9dEUbr1iAqdopiRzBzYNVxEDi655g" />
-
-
     </application>
 
 </manifest>
