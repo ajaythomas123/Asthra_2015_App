@@ -23,15 +23,15 @@ public class EventsActivity extends BaseActivity implements MaterialTabListener 
     /*The following 6 arrays store the details of the events.
     * Each time you add a new event, make sure you add the required values in the arrays.
     * The String array called eventIds is the id used to identify the event in the database.*/
-    String[] eventIds = {"AEI1", "AEI2", "CE1", "CE2", "CSE1", "CSE2", "ECE1", "ECE2", "EEE1", "EEE2", "ME1", "ME2"};
-    String[] eventNames = {"AEI Event 1", "AIE Event 2", "CE Event 1", "CE Event 2", "CSE Event 1", "CSE Event 2", "ECE Event 1", "ECE Event 2", "EEE Event 1", "EEE Event 2", "ME Event 1", "ME Event 2"};
-    String[] eventDescriptions = new String[12];
-    String[] eventBranches = {"AEI", "AEI", "CE", "CE", "CSE", "CSE", "ECE", "ECE", "EEE", "EEE", "ME", "ME"};
-    int[] eventDays = {1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2};
-    String[] eventTimes = {"10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM", "10:00AM", "2:00PM"};
-    Boolean[] eventSpot = {false, true, false, true, false, true, false, true, false, true, false, true};
-    Boolean[] eventTeam = {true, true, false, true, false, true, false, true, false, true, false, true};
-    int[] eventPosterIds = {R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event};
+    String[] eventIds = {"AEI1", "AEI2", "AEI3", "AEI4", "CE1", "CE2", "CE3", "CE4", "CSE1", "CSE2", "CSE3", "CSE4", "ECE1", "ECE2", "ECE3", "ECE4", "ECE5", "EEE1", "EEE2", "EEE3", "EEE4", "ME1", "ME2", "ME3", "ME4","ME5"};
+    String[] eventNames = {"Kalinga", "Technocrat", "Pyrokinesis", "Inquizitive", "Castello", "Esittely", "Secret Rush", "Decollare", "Cybertron", "TecHtuZ", "BASH-Err", "Alt-Ctrl-Delicious", "Robo Race", "El-Classico", "Circuit Debugging", "VIBGYOR", "Vault2", "Recreate", "Bodha", "In Time", "E Whizz", "Mex Hunt", "Papera", "Junkyard Wars", "Driver's Bay", "Aqua Missile"};
+    String[] eventDescriptions = new String[26];
+    String[] eventBranches = {"AEI", "AEI",  "AEI", "AEI", "CE", "CE", "CE", "CE", "CSE", "CSE", "CSE", "CSE", "ECE", "ECE", "ECE", "ECE", "ECE", "EEE", "EEE", "EEE", "EEE", "ME", "ME", "ME", "ME", "ME"};
+    int[] eventDays = {1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1, 12, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 2, 1};
+    String[] eventTimes = {"Full Day", "Forenoon", "Full Day", "Forenoon", "N/A", "N/A", "N/A", "N/A", "Full Day", "Full Day", "Full Day", "Full Day", "Forenoon", "N/A", "Forenoon", "Full Day", "Forenoon", "Full Day", "Full Day", "Full Day", "Full Day", "Full Day", "Full Day", "Full Day", "N/A", "Full Day"};
+    Boolean[] eventSpot = {false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true};
+    Boolean[] eventTeam = {true, true, false, true, false, true, false, true, false, true, false, true, true, true, false, true, false, true, false, true, false, true, false, true, false, true};
+    int[] eventPosterIds = {R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class EventsActivity extends BaseActivity implements MaterialTabListener 
         setContentView(R.layout.activity_events);
         super.onBaseCreate("Events");
         eventDescriptions = getResources().getStringArray(R.array.event_descriptions);
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 26; i++) {
             eventDetails = new EventDetails();
             eventDetails.setEventId(eventIds[i]);
             eventDetails.setEventName(eventNames[i]);

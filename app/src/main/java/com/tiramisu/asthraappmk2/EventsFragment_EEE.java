@@ -24,7 +24,7 @@ public class EventsFragment_EEE extends Fragment implements ClickListener {
     EventsActivity eventsActivity;
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
-    String[] eeeEventDescriptions = new String[12];
+    String[] eeeEventDescriptions = new String[26];
 
     public EventsFragment_EEE() {
         // Required empty public constructor
@@ -38,7 +38,7 @@ public class EventsFragment_EEE extends Fragment implements ClickListener {
         eventsActivity = new EventsActivity();
         eeeEventDescriptions = getResources().getStringArray(R.array.event_descriptions);
         String branch;
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 26; i++) {
             branch = eventsActivity.eventBranches[i];
             if (branch.equals("EEE")) {
                 eeeEventDetails = new EventDetails();

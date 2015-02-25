@@ -24,7 +24,7 @@ public class EventsFragment_ECE extends Fragment implements ClickListener {
     EventsActivity eventsActivity;
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
-    String[] eceEventDescriptions = new String[12];
+    String[] eceEventDescriptions = new String[26];
 
     public EventsFragment_ECE() {
         // Required empty public constructor
@@ -38,7 +38,7 @@ public class EventsFragment_ECE extends Fragment implements ClickListener {
         eventsActivity = new EventsActivity();
         eceEventDescriptions = getResources().getStringArray(R.array.event_descriptions);
         String branch;
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 26; i++) {
             branch = eventsActivity.eventBranches[i];
             if (branch.equals("ECE")) {
                 eceEventDetails = new EventDetails();
