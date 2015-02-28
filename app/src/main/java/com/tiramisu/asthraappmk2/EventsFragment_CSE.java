@@ -25,6 +25,9 @@ public class EventsFragment_CSE extends Fragment implements ClickListener {
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
     String[] cseEventDescriptions = new String[26];
+    String[] cseEventRules = new String[26];
+    String[] cseEventContacts = new String[26];
+    String[] cseEventPrizes = new String[26];
 
 
     public EventsFragment_CSE() {
@@ -38,6 +41,9 @@ public class EventsFragment_CSE extends Fragment implements ClickListener {
         view = inflater.inflate(R.layout.fragment_events_cse, container, false);
         eventsActivity = new EventsActivity();
         cseEventDescriptions = getResources().getStringArray(R.array.event_descriptions);
+        cseEventRules = getResources().getStringArray(R.array.event_rules);
+        cseEventContacts = getResources().getStringArray(R.array.event_contacts);
+        cseEventPrizes = getResources().getStringArray(R.array.event_prizes);
         String branch;
         for (int i = 0; i < 26; i++) {
             branch = eventsActivity.eventBranches[i];
@@ -46,6 +52,9 @@ public class EventsFragment_CSE extends Fragment implements ClickListener {
                 cseEventDetails.setEventId(eventsActivity.eventIds[i]);
                 cseEventDetails.setEventName(eventsActivity.eventNames[i]);
                 cseEventDetails.setEventDescription(cseEventDescriptions[i]);
+                cseEventDetails.setEventRule(cseEventRules[i]);
+                cseEventDetails.setEventContact(cseEventContacts[i]);
+                cseEventDetails.setEventPrize(cseEventPrizes[i]);
                 cseEventDetails.setEventBranch(eventsActivity.eventBranches[i]);
                 cseEventDetails.setEventDay(eventsActivity.eventDays[i]);
                 cseEventDetails.setEventTime(eventsActivity.eventTimes[i]);
@@ -70,6 +79,9 @@ public class EventsFragment_CSE extends Fragment implements ClickListener {
         intent.putExtra("eventId", cseEvents.get(position).getEventId());
         intent.putExtra("eventName", cseEvents.get(position).getEventName());
         intent.putExtra("eventDescription", cseEvents.get(position).getEventDescription());
+        intent.putExtra("eventDescription", cseEvents.get(position).getEventDescription());
+        intent.putExtra("eventRule", cseEvents.get(position).getEventRule());
+        intent.putExtra("eventPrize", cseEvents.get(position).getEventPrize());
         intent.putExtra("eventBranch", cseEvents.get(position).getEventBranch());
         intent.putExtra("eventDay", cseEvents.get(position).getEventDay());
         intent.putExtra("eventTime", cseEvents.get(position).getEventTime());

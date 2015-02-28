@@ -25,6 +25,9 @@ public class EventsFragment_EEE extends Fragment implements ClickListener {
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
     String[] eeeEventDescriptions = new String[26];
+    String[] eeeEventRules = new String[26];
+    String[] eeeEventContacts = new String[26];
+    String[] eeeEventPrizes = new String[26];
 
     public EventsFragment_EEE() {
         // Required empty public constructor
@@ -37,6 +40,9 @@ public class EventsFragment_EEE extends Fragment implements ClickListener {
         view = inflater.inflate(R.layout.fragment_events_eee, container, false);
         eventsActivity = new EventsActivity();
         eeeEventDescriptions = getResources().getStringArray(R.array.event_descriptions);
+        eeeEventRules = getResources().getStringArray(R.array.event_rules);
+        eeeEventContacts = getResources().getStringArray(R.array.event_contacts);
+        eeeEventPrizes = getResources().getStringArray(R.array.event_prizes);
         String branch;
         for (int i = 0; i < 26; i++) {
             branch = eventsActivity.eventBranches[i];
@@ -45,6 +51,9 @@ public class EventsFragment_EEE extends Fragment implements ClickListener {
                 eeeEventDetails.setEventId(eventsActivity.eventIds[i]);
                 eeeEventDetails.setEventName(eventsActivity.eventNames[i]);
                 eeeEventDetails.setEventDescription(eeeEventDescriptions[i]);
+                eeeEventDetails.setEventRule(eeeEventRules[i]);
+                eeeEventDetails.setEventContact(eeeEventContacts[i]);
+                eeeEventDetails.setEventPrize(eeeEventPrizes[i]);
                 eeeEventDetails.setEventBranch(eventsActivity.eventBranches[i]);
                 eeeEventDetails.setEventDay(eventsActivity.eventDays[i]);
                 eeeEventDetails.setEventTime(eventsActivity.eventTimes[i]);
@@ -69,6 +78,9 @@ public class EventsFragment_EEE extends Fragment implements ClickListener {
         intent.putExtra("eventId", eeeEvents.get(position).getEventId());
         intent.putExtra("eventName", eeeEvents.get(position).getEventName());
         intent.putExtra("eventDescription", eeeEvents.get(position).getEventDescription());
+        intent.putExtra("eventRule", eeeEvents.get(position).getEventRule());
+        intent.putExtra("eventContact", eeeEvents.get(position).getEventContact());
+        intent.putExtra("eventPrize", eeeEvents.get(position).getEventPrize());
         intent.putExtra("eventBranch", eeeEvents.get(position).getEventBranch());
         intent.putExtra("eventDay", eeeEvents.get(position).getEventDay());
         intent.putExtra("eventTime", eeeEvents.get(position).getEventTime());

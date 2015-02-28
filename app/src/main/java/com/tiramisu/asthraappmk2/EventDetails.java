@@ -9,7 +9,10 @@ public class EventDetails {
     String eventId;
     String eventName;
     String eventDescription;
+    String eventRule;
+    String eventContact;
     String eventBranch;
+    String eventPrize;
     int eventDay;
     String eventTime;
     int eventPosterId;
@@ -38,6 +41,30 @@ public class EventDetails {
 
     public void setEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
+    }
+
+    public String getEventRule() {
+        return eventRule;
+    }
+
+    public void setEventRule(String eventRule) {
+        this.eventRule = eventRule;
+    }
+
+    public String getEventContact() {
+        return eventContact;
+    }
+
+    public void setEventContact(String eventContact) {
+        this.eventContact = eventContact;
+    }
+
+    public String getEventPrize(){
+        return eventPrize;
+    }
+
+    public void setEventPrize(String eventPrize) {
+        this.eventPrize = eventPrize;
     }
 
     public String getEventBranch() {

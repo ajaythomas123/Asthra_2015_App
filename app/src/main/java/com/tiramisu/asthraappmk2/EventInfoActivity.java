@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class EventInfoActivity extends BaseActivity {
     TextView descriptionTextView;
     ImageView eventImage;
-    String eventId, eventName, eventDescription, eventBranch, eventTime;
+    String eventId, eventName, eventDescription, eventRule, eventContact, eventBranch, eventTime;
     Boolean eventSpot, eventTeam;
     int eventDay, eventPosterId;
     MenuItem item;
@@ -29,6 +29,8 @@ public class EventInfoActivity extends BaseActivity {
         eventId = intent.getStringExtra("eventId");
         eventName = intent.getStringExtra("eventName");
         eventDescription = intent.getStringExtra("eventDescription");
+        eventRule = intent.getStringExtra("eventRule");
+        eventContact = intent.getStringExtra("eventContact");
         eventBranch = intent.getStringExtra("eventBranch");
         eventTime = intent.getStringExtra("eventTime");
         eventTeam = intent.getBooleanExtra("eventTeam", true);
