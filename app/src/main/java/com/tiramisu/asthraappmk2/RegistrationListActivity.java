@@ -19,7 +19,7 @@ public class RegistrationListActivity extends BaseActivity implements ClickListe
     EventsActivity eventsActivity;
     RecyclerView recyclerView;
     RegistrationAdapter registrationAdapter;
-    String[] eventDescriptions = new String[12];
+    String[] eventDescriptions = new String[40];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class RegistrationListActivity extends BaseActivity implements ClickListe
         allEvents = new ArrayList<>();
         eventsActivity = new EventsActivity();
         eventDescriptions = getResources().getStringArray(R.array.event_descriptions);
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 40; i++) {
             if(eventsActivity.eventSpot[i] == false) {
                 eventDetails = new EventDetails();
                 eventDetails.setEventId(eventsActivity.eventIds[i]);

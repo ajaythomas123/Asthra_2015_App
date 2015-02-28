@@ -19,6 +19,46 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:id="@+id/poweredBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Powered by"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/companyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:layout_below="@id/poweredBy"
+                android:text="Binary ICE CREAM"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+                android:id="@+id/website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="www.binaryicecream.com"
+                android:layout_below="@id/companyName"
+                android:paddingBottom="4dp"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/developers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajay Thomas|Rajeev Krishnan"
+                android:layout_below="@id/website"
+                android:layout_centerHorizontal="true"/>
+
+
+
+
         </RelativeLayout>
 
         <android.support.v7.widget.RecyclerView

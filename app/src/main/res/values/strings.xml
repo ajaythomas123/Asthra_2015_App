@@ -36,11 +36,15 @@
     <string name="title_activity_event_info">EventInfoActivity</string>
 
     <string-array name="event_descriptions">
+        <item>  Management</item>
+        <item>  Treasure Hunt</item>
+        <item>  Project Presentation</item>
+        <item>  Games</item>
         <item>	Skill and Time Management</item>
         <item>	Paper Presentation</item>
         <item>	Tech Fun Zone</item>
         <item>	Quiz</item>
-        <item>	<![CDATA[Sand Castle Building \n• A team may consist of maximum of 4 members\n•	Materials will be provided]]></item>
+        <item>	Sand Castle Building</item>
         <item>	Paper Presentation</item>
         <item>	Treasure Hunt</item>
         <item>	Spot Construction</item>
@@ -62,67 +66,119 @@
         <item>	Scrap Assembly</item>
         <item>	Best Driver</item>
         <item>	Hydraulic Rocket War</item>
+        <item>  Photography Workshop</item>
+        <item>  Python Programming Workshop</item>
+        <item>  Photography Contest</item>
+        <item>  Group Selfie Contest</item>
+        <item>  Poster Designing</item>
+        <item>  Pattern Photography</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
     <string-array name="event_rules">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item><![CDATA[• Crysis: Warhead\n•	FIFA-11\n•	Asphalt 8: Airborne\n•	MotoGP\n•	Need for Speed: Most Wanted]]></item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
+        <item>Contact event coordinator for Rules and Regulations</item>
     </string-array>
 
     <string-array name="event_contacts">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Vazeem Harris: +919946730783</item>
+        <item>Joseph Thomas: +919567734090</item>
+        <item>Paulson Mathew: +919048509298</item>
+        <item>Adarsh Johny: +919496475448</item>
+        <item>Alwin Joe: +919495591669</item>
+        <item>Johns Cheriyachan: +919847970221</item>
+        <item>Gokul Shenoy: +919645879796</item>
+        <item>Amal Jose: +919605181503</item>
+        <item>Austin Sabu: +919497113377</item>
+        <item>Sijo Saji: +919497822462</item>
+        <item>Bibin Joseph: +919495617620</item>
+        <item>Micky Antony: +918281350298</item>
+        <item>Vishnu Babu: +919567691004</item>
+        <item>Akhil B: +919447915180</item>
+        <item>Paul Saba: +917560869889</item>
+        <item>Anandhu B Raj: +919496323637</item>
+        <item>Sajin Saj: +919497579363</item>
+        <item>Renold Thomas: +919539113734</item>
+        <item>Joseph Marian: +919497321738</item>
+        <item>Neville Jose: +919567024715</item>
+        <item>Akhil Nair: +919496189236</item>
+        <item>Ajay Krishnan: +919037146707</item>
+        <item>Elbin Paul: +919495424398</item>
+        <item>Joe Skaria: +918281046163</item>
+        <item>Jibilu George: +919446720899</item>
+        <item>Melbin Benny: +919495262873</item>
+        <item>Nandu Kumar: +919747438185</item>
+        <item>Jobert Colin: +919567175377</item>
+        <item>Vineeth R: +919947031323</item>
+        <item>Ajith James: +918086250391</item>
+        <item>Austin Sabu: +919497113377</item>
+        <item>Deepu Job: +918714511180</item>
+        <item>Alan Jacob: +918281368568</item>
+        <item>Bibin Joseph: +919020339361</item>
+        <item>Adarsh Johny: +919496475448</item>
+        <item>Vazeem Harris: +919946730783</item>
+        <item>Nithin Suresh: +918281290274</item>
+        <item>Nithin Suresh: +918281290274</item>
+        <item>Nithin Suresh: +918281290274</item>
+        <item>Nithin Suresh: +918281290274</item>
     </string-array>
 
     <string-array name="event_prizes">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
         <item></item>
         <item></item>
         <item></item>

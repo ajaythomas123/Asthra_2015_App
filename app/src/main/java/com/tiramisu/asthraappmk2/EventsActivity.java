@@ -8,9 +8,6 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import it.neokree.materialtabs.MaterialTab;
 import it.neokree.materialtabs.MaterialTabHost;
 import it.neokree.materialtabs.MaterialTabListener;
@@ -22,19 +19,19 @@ public class EventsActivity extends BaseActivity implements MaterialTabListener 
     EventDetails eventDetails;
     /*The following 6 arrays store the details of the events.
     * Each time you add a new event, make sure you add the required values in the arrays.
-    * The String array called eventIds is the id used to identify the event in the database.*/
-    String[] eventIds = {"AEI1", "AEI2", "AEI3", "AEI4", "CE1", "CE2", "CE3", "CE4", "CSE1", "CSE2", "CSE3", "CSE4", "ECE1", "ECE2", "ECE3", "ECE4", "ECE5", "EEE1", "EEE2", "EEE3", "EEE4", "ME1", "ME2", "ME3", "ME4","ME5"};
-    String[] eventNames = {"Kalinga", "Technocrat", "Pyrokinesis", "Inquizitive", "Castello", "Esittely", "Secret Rush", "Decollare", "Cybertron", "TecHtuZ", "BASH-Err", "Alt-Ctrl-Delicious", "Robo Race", "El-Classico", "Circuit Debugging", "VIBGYOR", "Vault2", "Recreate", "Bodha Paper", "In Time", "E Whizz", "Mex Hunt", "Papera", "Junkyard Wars", "Driver's Bay", "Aqua Missile"};
-    String[] eventDescriptions = new String[26];
-    String[] eventRules = new String[26];
-    String[] eventContacts = new String[26];
-    String[] eventPrizes = new String[26];
-    String[] eventBranches = {"AEI", "AEI",  "AEI", "AEI", "CE", "CE", "CE", "CE", "CSE", "CSE", "CSE", "CSE", "ECE", "ECE", "ECE", "ECE", "ECE", "EEE", "EEE", "EEE", "EEE", "ME", "ME", "ME", "ME", "ME"};
-    int[] eventDays = {1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1, 12, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 2, 1};
-    String[] eventTimes = {"Full Day", "Forenoon", "Full Day", "Forenoon", "N/A", "N/A", "N/A", "N/A", "Full Day", "Full Day", "Full Day", "Full Day", "Forenoon", "N/A", "Forenoon", "Full Day", "Forenoon", "Full Day", "Full Day", "Full Day", "Full Day", "Full Day", "Full Day", "Full Day", "N/A", "Full Day"};
-    Boolean[] eventSpot = {false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true};
-    Boolean[] eventTeam = {true, true, false, true, false, true, false, true, false, true, false, true, true, true, false, true, false, true, false, true, false, true, false, true, false, true};
-    int[] eventPosterIds = {R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event, R.drawable.dummy_event};
+    * The String array called eventIds contains the IDs used to identify the events in the database.*/
+    String[] eventIds = {"GE1", "GE2", "GE3", "GE4", "AEI1", "AEI2", "AEI3", "AEI4", "CE1", "CE2", "CE3", "CE4", "CSE1", "CSE2", "CSE3", "CSE4", "ECE1", "ECE2", "ECE3", "ECE4", "ECE5", "EEE1", "EEE2", "EEE3", "EEE4", "ME1", "ME2", "ME3", "ME4", "ME5", "WS1", "WS2", "OL1", "OL2", "OL3", "OL4", "INF1", "INF2", "INF3", "INF4"};
+    String[] eventNames = {"Mr & Mrs Asthra", "Tesoro", "Ideen", "Network Gaming", "Kalinga", "Technocrat", "Pyrokinesis", "Inquizitive", "Castello", "Esittely", "Secret Rush", "Decollare", "Cybertron", "TecHtuZ", "BASH-Err", "Alt-Ctrl-Delicious", "Robo Race", "El-Classico", "Circuit Debugging", "VIBGYOR", "Vault2", "Recreate", "Bodha Paper", "In Time", "E Whizz", "Mex Hunt", "Papera", "Junkyard Wars", "Driver's Bay", "Aqua Missile", "Photography", "Python Programming", "Snapist", "Group Selfiee", "RoadRash", "Asthra in Frames", "4 X 4 Football", "Shooting", "Laser Tag", "Minute to Win"};
+    String[] eventDescriptions = new String[40];
+    String[] eventRules = new String[40];
+    String[] eventContacts = new String[40];
+    String[] eventPrizes = new String[40];
+    String[] eventBranches = {"GE", "GE", "GE", "GE", "AEI", "AEI", "AEI", "AEI", "CE", "CE", "CE", "CE", "CSE", "CSE", "CSE", "CSE", "ECE", "ECE", "ECE", "ECE", "ECE", "EEE", "EEE", "EEE", "EEE", "ME", "ME", "ME", "ME", "ME", "WS", "WS", "OL", "OL", "OL", "OL", "INF", "INF", "INF", "INF"};
+    int[] eventDays = {1, 2, 1, 12, 1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1, 12, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    String[] eventTimes = {"N/A", "N/A", "N/A", "N/A", "Full Day", "Forenoon", "Full Day", "Forenoon", "N/A", "N/A", "N/A", "N/A", "Full Day", "Full Day", "Full Day", "Full Day", "Forenoon", "N/A", "Forenoon", "Full Day", "Forenoon", "Full Day", "Full Day", "Full Day", "Full Day", "Full Day", "Full Day", "Full Day", "N/A", "Full Day", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "", "", "", "", "", "", "", "", "", ""};
+    Boolean[] eventSpot = {false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, true, true, true, true, true};
+    Boolean[] eventTeam = {false, true, false, false, true, false, true, true, true, true, true, true, true, true, false, false, true, true, true, true, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, true, true, true, false};
+    int[] eventPosterIds = {R.drawable.eposter0, R.drawable.eposter1, R.drawable.eposter2, R.drawable.eposter3, R.drawable.eposter4, R.drawable.eposter5, R.drawable.eposter6, R.drawable.eposter7, R.drawable.eposter8, R.drawable.eposter9, R.drawable.eposter10, R.drawable.eposter11, R.drawable.eposter12, R.drawable.eposter13, R.drawable.eposter14, R.drawable.eposter15, R.drawable.eposter16, R.drawable.eposter17, R.drawable.eposter18, R.drawable.eposter19, R.drawable.eposter20, R.drawable.eposter21, R.drawable.eposter22, R.drawable.eposter23, R.drawable.eposter24, R.drawable.eposter25, R.drawable.eposter26, R.drawable.eposter27, R.drawable.eposter28, R.drawable.eposter29, R.drawable.eposter30, R.drawable.eposter31, R.drawable.eposter32, R.drawable.eposter33, R.drawable.eposter34, R.drawable.eposter35, R.drawable.eposter36, R.drawable.eposter37, R.drawable.eposter38, R.drawable.eposter39};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,22 +126,34 @@ class EventPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
-            return "Applied Electronics";
+            return "General";
         }
         if (position == 1) {
-            return "Civil";
+            return "Applied Electronics";
         }
         if (position == 2) {
-            return "Computer Science";
+            return "Civil";
         }
         if (position == 3) {
-            return "Electronics";
+            return "Computer Science";
         }
         if (position == 4) {
-            return "Electrical";
+            return "Electronics";
         }
         if (position == 5) {
+            return "Electrical";
+        }
+        if (position == 6) {
             return "Mechanical";
+        }
+        if (position == 7) {
+            return "Workshops";
+        }
+        if (position == 8) {
+            return "Online";
+        }
+        if (position == 9) {
+            return "Informals";
         }
         return null;
     }
@@ -153,22 +162,34 @@ class EventPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         Fragment fragment = null;
         if (position == 0) {
-            fragment = new EventsFragment_AEI();
+            fragment = new EventsFragment_GE();
         }
         if (position == 1) {
-            fragment = new EventsFragment_CE();
+            fragment = new EventsFragment_AEI();
         }
         if (position == 2) {
-            fragment = new EventsFragment_CSE();
+            fragment = new EventsFragment_CE();
         }
         if (position == 3) {
-            fragment = new EventsFragment_ECE();
+            fragment = new EventsFragment_CSE();
         }
         if (position == 4) {
-            fragment = new EventsFragment_EEE();
+            fragment = new EventsFragment_ECE();
         }
         if (position == 5) {
+            fragment = new EventsFragment_EEE();
+        }
+        if (position == 6) {
             fragment = new EventsFragment_ME();
+        }
+        if (position == 7) {
+            fragment = new EventsFragment_WS();
+        }
+        if (position == 8) {
+            fragment = new EventsFragment_OL();
+        }
+        if (position == 9) {
+            fragment = new EventsFragment_INF();
         }
 
         return fragment;
@@ -176,6 +197,6 @@ class EventPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 6;
+        return 10;
     }
 }

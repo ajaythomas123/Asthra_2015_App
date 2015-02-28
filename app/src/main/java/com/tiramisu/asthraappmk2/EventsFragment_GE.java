@@ -1,18 +1,24 @@
 package com.tiramisu.asthraappmk2;
 
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends BaseActivity implements ClickListener{
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class EventsFragment_GE extends Fragment implements ClickListener{
+    View view;
     List<EventDetails> geEvents;
     EventDetails geEventDetails;
     EventsActivity eventsActivity;
@@ -23,14 +29,15 @@ public class MainActivity extends BaseActivity implements ClickListener{
     String[] geEventContacts = new String[40];
     String[] geEventPrizes = new String[40];
 
+    public EventsFragment_GE() {
+        // Required empty public constructor
+    }
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        super.onBaseCreate("Asthra 2015");
-
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        view = inflater.inflate(R.layout.fragment_events_ge, container, false);
         geEvents = new ArrayList<>();
         eventsActivity = new EventsActivity();
         geEventDescriptions = getResources().getStringArray(R.array.event_descriptions);
@@ -57,45 +64,17 @@ public class MainActivity extends BaseActivity implements ClickListener{
                 geEvents.add(geEventDetails);
             }
         }
-        recyclerView = (RecyclerView) findViewById(R.id.eventRecycler);
-        eventCardAdapter = new EventCardAdapter(this, geEvents);
+        recyclerView = (RecyclerView) view.findViewById(R.id.eventRecycler);
+        eventCardAdapter = new EventCardAdapter(getActivity(), geEvents);
         eventCardAdapter.setClickListener(this);
         recyclerView.setAdapter(eventCardAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        /*Hiding action bar buttons*/
-        //getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    protected int getSelfNavDrawerItem() {
-        return NAVDRAWER_ITEM_HOME;
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        return view;
     }
 
     @Override
     public void itemClicked(View view, int position) {
-        Intent intent = new Intent(this, EventInfoActivity.class);
+        Intent intent = new Intent(getActivity(), EventInfoActivity.class);
 
         intent.putExtra("eventId", geEvents.get(position).getEventId());
         intent.putExtra("eventName", geEvents.get(position).getEventName());

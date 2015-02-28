@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 
 public class EventInfoActivity extends BaseActivity {
-    TextView descriptionTextView;
+    TextView descriptionTextView, ruleTextView, contactTextView;
     ImageView eventImage;
-    String eventId, eventName, eventDescription, eventRule, eventContact, eventBranch, eventTime;
+    String eventId, eventName, eventDescription, eventRule, eventContact, eventPrize, eventBranch, eventTime;
     Boolean eventSpot, eventTeam;
     int eventDay, eventPosterId;
     MenuItem item;
@@ -24,12 +24,15 @@ public class EventInfoActivity extends BaseActivity {
         setContentView(R.layout.activity_event_info);
         super.onBaseCreate("");
         descriptionTextView = (TextView) findViewById(R.id.eventDescription);
+        ruleTextView = (TextView) findViewById(R.id.eventRules);
+        contactTextView = (TextView) findViewById(R.id.contactInfo);
         eventImage = (ImageView) findViewById(R.id.eventImage);
         Intent intent = getIntent();
         eventId = intent.getStringExtra("eventId");
         eventName = intent.getStringExtra("eventName");
         eventDescription = intent.getStringExtra("eventDescription");
         eventRule = intent.getStringExtra("eventRule");
+        eventPrize = intent.getStringExtra("eventPrize");
         eventContact = intent.getStringExtra("eventContact");
         eventBranch = intent.getStringExtra("eventBranch");
         eventTime = intent.getStringExtra("eventTime");
@@ -40,6 +43,8 @@ public class EventInfoActivity extends BaseActivity {
 
         toolbar.setTitle(eventName);
         descriptionTextView.setText(eventDescription);
+        ruleTextView.setText(eventRule);
+        contactTextView.setText(eventContact);
         eventImage.setImageResource(eventPosterId);
 
         //A small stunt here. look into this later TODO
@@ -73,13 +78,13 @@ public class EventInfoActivity extends BaseActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_event_info, menu);
 
-        /*Hiding the Register Button
+
         if(!eventSpot) {
             item = menu.add(Menu.NONE, R.id.action_NewReg, Menu.NONE, R.string.reg);
             item.setIcon(R.drawable.ic_register_white_24dp);
             item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         }
-        */
+
 
             return true;
     }

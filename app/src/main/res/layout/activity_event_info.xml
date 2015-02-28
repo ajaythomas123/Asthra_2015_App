@@ -39,7 +39,40 @@
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:paddingTop="8dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textColor="#000"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/eventRules"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Rules"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_below="@id/eventDescription"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp"
+                    />
+            <EditText
+                android:id="@+id/contactHeading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Event Coordinator"
+                android:layout_below="@id/eventRules"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:editable="false"
+                android:textColorHint="#000"/>
+            <TextView
+                android:id="@+id/contactInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/contactHeading"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
 
 
