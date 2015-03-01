@@ -46,7 +46,7 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
     ProgressDialog pDialog;
     JSONParser jsonParser = new JSONParser();
     //REG_URL="http://server.heyteam.me/SJCET/asthra-reg.php"
-    private static final String REG_URL="http://server.heyteam.me/SJCET/asthra-reg.php";
+    private static final String REG_URL="http://server.asthra2015.com/asthra-reg.php";
     private static final String TAG_SUCCESS = "success";
 
     private boolean isNetworkAvailable() {

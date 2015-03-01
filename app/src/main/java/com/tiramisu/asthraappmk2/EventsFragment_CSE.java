@@ -81,6 +81,7 @@ public class EventsFragment_CSE extends Fragment implements ClickListener {
         intent.putExtra("eventDescription", cseEvents.get(position).getEventDescription());
         intent.putExtra("eventDescription", cseEvents.get(position).getEventDescription());
         intent.putExtra("eventRule", cseEvents.get(position).getEventRule());
+        intent.putExtra("eventContact", cseEvents.get(position).getEventContact());
         intent.putExtra("eventPrize", cseEvents.get(position).getEventPrize());
         intent.putExtra("eventBranch", cseEvents.get(position).getEventBranch());
         intent.putExtra("eventDay", cseEvents.get(position).getEventDay());
