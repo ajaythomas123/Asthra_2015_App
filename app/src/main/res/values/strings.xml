@@ -109,8 +109,8 @@
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
+        <item><![CDATA[Registration Fee: Rs. 50/Head\nContact event coordinator for more details]]></item>
+        <item>Contact event coordinator for more details</item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
@@ -122,89 +122,89 @@
     </string-array>
 
     <string-array name="event_contacts">
-        <item>Vazeem Harris: +919946730783</item>
-        <item>Joseph Thomas: +919567734090</item>
-        <item>Paulson Mathew: +919048509298</item>
-        <item>Adarsh Johny: +919496475448</item>
-        <item>Alwin Joe: +919495591669</item>
-        <item>Johns Cheriyachan: +919847970221</item>
-        <item>Gokul Shenoy: +919645879796</item>
-        <item>Amal Jose: +919605181503</item>
-        <item>Austin Sabu: +919497113377</item>
-        <item>Sijo Saji: +919497822462</item>
-        <item>Bibin Joseph: +919495617620</item>
-        <item>Micky Antony: +918281350298</item>
-        <item>Vishnu Babu: +919567691004</item>
-        <item>Akhil B: +919447915180</item>
-        <item>Paul Saba: +917560869889</item>
-        <item>Anandhu B Raj: +919496323637</item>
-        <item>Sajin Saj: +919497579363</item>
-        <item>Renold Thomas: +919539113734</item>
-        <item>Joseph Marian: +919497321738</item>
-        <item>Neville Jose: +919567024715</item>
-        <item>Akhil Nair: +919496189236</item>
-        <item>Ajay Krishnan: +919037146707</item>
-        <item>Elbin Paul: +919495424398</item>
-        <item>Joe Skaria: +918281046163</item>
-        <item>Jibilu George: +919446720899</item>
-        <item>Melbin Benny: +919495262873</item>
-        <item>Nandu Kumar: +919747438185</item>
-        <item>Jobert Colin: +919567175377</item>
-        <item>Vineeth R: +919947031323</item>
-        <item>Ajith James: +918086250391</item>
-        <item>Austin Sabu: +919497113377</item>
-        <item>Deepu Job: +918714511180</item>
-        <item>Alan Jacob: +918281368568</item>
-        <item>Bibin Joseph: +919020339361</item>
-        <item>Adarsh Johny: +919496475448</item>
-        <item>Vazeem Harris: +919946730783</item>
-        <item>Nithin Suresh: +918281290274</item>
-        <item>Nithin Suresh: +918281290274</item>
-        <item>Nithin Suresh: +918281290274</item>
-        <item>Nithin Suresh: +918281290274</item>
+        <item>Vazeem Harris: +91 9946730783</item>
+        <item>Joseph Thomas: +91 9567734090</item>
+        <item>Paulson Mathew: +91 9048509298</item>
+        <item>Adarsh Johny: +91 9496475448</item>
+        <item>Alwin Joe: +91 9495591669</item>
+        <item>Johns Cheriyachan: +91 9847970221</item>
+        <item>Gokul Shenoy: +91 9645879796</item>
+        <item>Amal Jose: +91 9605181503</item>
+        <item>Austin Sabu: +91 9497113377</item>
+        <item>Sijo Saji: +91 9497822462</item>
+        <item>Bibin Joseph: +91 9495617620</item>
+        <item>Micky Antony: +91 8281350298</item>
+        <item>Vishnu Babu: +91 9567691004</item>
+        <item>Akhil B: +91 9447915180</item>
+        <item>Paul Saba: +91 7560869889</item>
+        <item>Anandhu B Raj: +91 9496323637</item>
+        <item>Sajin Saj: +91 9497579363</item>
+        <item>Renold Thomas: +91 9539113734</item>
+        <item>Joseph Marian: +91 9497321738</item>
+        <item>Neville Jose: +91 9567024715</item>
+        <item>Akhil Nair: +91 9496189236</item>
+        <item>Ajay Krishnan: +91 9037146707</item>
+        <item>Elbin Paul: +91 9495424398</item>
+        <item>Joe Skaria: +91 8281046163</item>
+        <item>Jibilu George: +91 9446720899</item>
+        <item>Melbin Benny: +91 9495262873</item>
+        <item>Nandu Kumar: +91 9747438185</item>
+        <item>Jobert Colin: +91 9567175377</item>
+        <item>Vineeth R: +91 9947031323</item>
+        <item>Ajith James: +91 8086250391</item>
+        <item>Austin Sabu: +91 9497113377</item>
+        <item>Deepu Job: +91 8714511180</item>
+        <item>Alan Jacob: +91 8281368568</item>
+        <item>Bibin Joseph: +91 9020339361</item>
+        <item>Adarsh Johny: +91 9496475448</item>
+        <item>Vazeem Harris: +91 9946730783</item>
+        <item>Nithin Suresh: +91 8281290274</item>
+        <item>Nithin Suresh: +91 8281290274</item>
+        <item>Nithin Suresh: +91 8281290274</item>
+        <item>Nithin Suresh: +91 8281290274</item>
     </string-array>
 
     <string-array name="event_prizes">
+        <item>10K</item>
+        <item>10K</item>
+        <item>15K</item>
+        <item>20K</item>
+        <item>12K</item>
+        <item>5K</item>
+        <item>12K</item>
+        <item>5K</item>
+        <item>8K</item>
+        <item>5K</item>
+        <item>10K</item>
+        <item>8K</item>
+        <item>10K</item>
+        <item>7K</item>
+        <item>5K</item>
+        <item>3K</item>
+        <item>10K</item>
+        <item>10K</item>
+        <item>3K</item>
+        <item>5K</item>
+        <item>5K</item>
+        <item>5K</item>
+        <item>5K</item>
+        <item>12K</item>
+        <item>12K</item>
+        <item>10K</item>
+        <item>5K</item>
+        <item>10K</item>
+        <item>5K</item>
+        <item>5K</item>
         <item></item>
         <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>4K</item>
+        <item>4K</item>
+        <item>4K</item>
+        <item>3K</item>
+        <item>15K (Combined)</item>
+        <item>15K (Combined)</item>
+        <item>15K (Combined)</item>
+        <item>15K (Combined)</item>
     </string-array>
 
     <string name="title_activity_registration_list">RegistrationListActivity</string>
@@ -229,7 +229,7 @@
     <string name="staff_coordinator">Staff Coordinator</string>
     <string name="asthra_email_heading">Email Us</string>
 
-    <string name="name_studcord1">Jerin Paul: +919633755567</string>
+    <string name="name_studcord1">Jerin Paul: +91 9633755567</string>
     <string name="name_studcord2">Tony Joseph: +91 9746830930</string>
     <string name="name_staffcord">Abi Mathew: +91 9447581511</string>
     <string name="asthra_email">contact@asthra2015.com</string>

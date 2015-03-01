@@ -53,12 +53,36 @@
                     android:paddingRight="8dp"
                     android:paddingTop="8dp"
                     />
+
+            <TextView
+                android:id="@+id/prizeHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:text="Prize Worth:"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@id/eventRules"/>
+
+            <TextView
+                android:id="@+id/prizeMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:text="Prize"
+                android:layout_below="@id/eventRules"
+                android:layout_alignBaseline="@id/prizeHead"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_toRightOf="@id/prizeHead" />
             <EditText
                 android:id="@+id/contactHeading"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Event Coordinator"
-                android:layout_below="@id/eventRules"
+                android:layout_below="@id/prizeHead"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
                 android:paddingTop="8dp"

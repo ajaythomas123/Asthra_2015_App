@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 
 public class EventInfoActivity extends BaseActivity {
-    TextView descriptionTextView, ruleTextView, contactTextView;
+    TextView descriptionTextView, ruleTextView, contactTextView, prizeTextView;
     ImageView eventImage;
     String eventId, eventName, eventDescription, eventRule, eventContact, eventPrize, eventBranch, eventTime;
     Boolean eventSpot, eventTeam;
@@ -26,6 +26,7 @@ public class EventInfoActivity extends BaseActivity {
         descriptionTextView = (TextView) findViewById(R.id.eventDescription);
         ruleTextView = (TextView) findViewById(R.id.eventRules);
         contactTextView = (TextView) findViewById(R.id.contactInfo);
+        prizeTextView = (TextView) findViewById(R.id.prizeMoney);
         eventImage = (ImageView) findViewById(R.id.eventImage);
         Intent intent = getIntent();
         eventId = intent.getStringExtra("eventId");
@@ -44,6 +45,7 @@ public class EventInfoActivity extends BaseActivity {
         toolbar.setTitle(eventName);
         descriptionTextView.setText(eventDescription);
         ruleTextView.setText(eventRule);
+        prizeTextView.setText(eventPrize);
         contactTextView.setText(eventContact);
         eventImage.setImageResource(eventPosterId);
 
