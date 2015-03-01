@@ -3,6 +3,8 @@ package com.tiramisu.asthraappmk2;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Base64;
@@ -47,6 +49,12 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
     private static final String REG_URL="http://server.heyteam.me/SJCET/asthra-reg.php";
     private static final String TAG_SUCCESS = "success";
 
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(this.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 
 
 
@@ -179,7 +187,10 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_donereg) {
-            doReg();
+            if(isNetworkAvailable())
+                doReg();
+            else
+                Toast.makeText(this,"Check your Internet connection!", Toast.LENGTH_SHORT).show();
             return true;
         }
 
@@ -383,6 +394,8 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
 
 
     }
+
+
 
     /***************************************************************************************************************/
 
