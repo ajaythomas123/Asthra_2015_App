@@ -13,8 +13,8 @@
     <string name="title_activity_informals">InformalsActivity</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_location">LocationActivity</string>
-    <string name="map_title">Wondering how to reach SJCET ?</string>
-    <string name="map_sub_title">Not to worry! we got all our events mapped out below : </string>
+    <string name="map_title">SJCET Map</string>
+    <string name="map_sub_title"></string>
     <string name="spinner_course">Course</string>
     <string name="spinner_department">Department</string>
 
@@ -82,7 +82,7 @@
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
-        <item><![CDATA[• Crysis: Warhead\n•	FIFA-11\n•	Asphalt 8: Airborne\n•	MotoGP\n•	Need for Speed: Most Wanted]]></item>
+        <item><![CDATA[• Crysis: Warhead\n•	FIFA-11\n•	Asphalt 8: Airborne\n•	MotoGP\n•	Need for Speed: Most Wanted\nContact event coordinator for Rules and Regulations]]></item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
@@ -195,8 +195,8 @@
         <item>10K</item>
         <item>5K</item>
         <item>5K</item>
-        <item></item>
-        <item></item>
+        <item>N/A</item>
+        <item>N/A</item>
         <item>4K</item>
         <item>4K</item>
         <item>4K</item>

@@ -53,6 +53,17 @@
                     android:paddingRight="8dp"
                     android:paddingTop="8dp"
                     />
+            <TextView
+                android:id="@+id/eventDay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Day: "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@id/eventRules"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                />
 
             <TextView
                 android:id="@+id/prizeHead"
@@ -63,7 +74,7 @@
                 android:paddingTop="8dp"
                 android:text="Prize Worth:"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_below="@id/eventRules"/>
+                android:layout_below="@id/eventDay"/>
 
             <TextView
                 android:id="@+id/prizeMoney"

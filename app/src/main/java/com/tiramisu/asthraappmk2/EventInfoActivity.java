@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 
 public class EventInfoActivity extends BaseActivity {
-    TextView descriptionTextView, ruleTextView, contactTextView, prizeTextView;
+    TextView descriptionTextView, ruleTextView, contactTextView, prizeHeadTextView, prizeTextView, dayTextView;
     ImageView eventImage;
     String eventId, eventName, eventDescription, eventRule, eventContact, eventPrize, eventBranch, eventTime;
     Boolean eventSpot, eventTeam;
@@ -27,6 +28,8 @@ public class EventInfoActivity extends BaseActivity {
         ruleTextView = (TextView) findViewById(R.id.eventRules);
         contactTextView = (TextView) findViewById(R.id.contactInfo);
         prizeTextView = (TextView) findViewById(R.id.prizeMoney);
+        dayTextView = (TextView) findViewById(R.id.eventDay);
+        prizeHeadTextView = (TextView) findViewById(R.id.prizeHead);
         eventImage = (ImageView) findViewById(R.id.eventImage);
         Intent intent = getIntent();
         eventId = intent.getStringExtra("eventId");
@@ -45,7 +48,24 @@ public class EventInfoActivity extends BaseActivity {
         toolbar.setTitle(eventName);
         descriptionTextView.setText(eventDescription);
         ruleTextView.setText(eventRule);
+        switch (eventDay){
+            case 1:
+                dayTextView.setText("Day: 1");
+                break;
+            case 2:
+                dayTextView.setText("Day: 2");
+                break;
+            case 12:
+                dayTextView.setText("Day: 1 & 2");
+                break;
+            default:
+                dayTextView.setVisibility(View.GONE);
+        }
         prizeTextView.setText(eventPrize);
+        if(eventPrize.equals("N/A")) {
+            prizeHeadTextView.setVisibility(View.GONE);
+            prizeTextView.setVisibility(View.GONE);
+        }
         contactTextView.setText(eventContact);
         eventImage.setImageResource(eventPosterId);
 
