@@ -49,7 +49,7 @@
         <item>	Treasure Hunt</item>
         <item>	Spot Construction</item>
         <item>	Computer Skills</item>
-        <item>	Treasure Hunt</item>
+        <item>	Technical Treasure Hunt</item>
         <item>	Coding and Debugging</item>
         <item>	Tech Fun Zone</item>
         <item>	Robot Racing</item>
@@ -100,7 +100,7 @@
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
+        <item><![CDATA[Topic: Power Quality Issues in Power System\n• Continuous no break in power\n• Voltage regulation\n• Sine wave\n• Isolation\n• Constant Frequency\nContact event coordinator for Rules and Regulations]]></item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
@@ -210,7 +210,7 @@
     <string name="email">Email ID</string>
     <string name="member">Member Name</string>
     <string name="team">Give a Team Name</string>
-    <string name="text_team">Team Details</string>
+    <string name="text_team">Team Details (as per rules)</string>
     <string name="dept">Department</string>
     <string name="college">Enter College Name</string>
     <string name="event">Event</string>
@@ -224,10 +224,12 @@
     <string name="student_coordinators">Student Coordinators</string>
     <string name="staff_coordinator">Staff Coordinator</string>
     <string name="asthra_email_heading">Email Us</string>
+    <string name="asthra_website_heading">Website</string>
     <string name="name_studcord1">Jerin Paul: +91 9633755567</string>
     <string name="name_studcord2">Tony Joseph: +91 9746830930</string>
     <string name="name_staffcord">Abi Mathew: +91 9447581511</string>
     <string name="asthra_email">contact@asthra2015.com</string>
+    <string name="asthra_website">www.asthra2015.com</string>
     <string name="title_activity_splash">SplashActivity</string>
 
 </resources>

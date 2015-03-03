@@ -26,11 +26,11 @@ public class SplashActivity extends Activity {
         Thread timer = new Thread(){
             public void run(){
                 try{
-                    sleep(2000);
+                    sleep(1500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }finally {
-                    Intent openMainActivity = new Intent("com.tiramisu.AsthraAppMk2.MAINACTIVITY");
+                    Intent openMainActivity = new Intent("com.tiramisu.AsthraAppMk2.EVENTSACTIVITY");
                     startActivity(openMainActivity);
                 }
             }

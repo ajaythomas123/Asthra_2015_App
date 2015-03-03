@@ -1,5 +1,6 @@
 package com.tiramisu.asthraappmk2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,7 +22,7 @@ public class EventsActivity extends BaseActivity implements MaterialTabListener 
     * Each time you add a new event, make sure you add the required values in the arrays.
     * The String array called eventIds contains the IDs used to identify the events in the database.*/
     String[] eventIds = {"GE1", "GE2", "GE3", "GE4", "AEI1", "AEI2", "AEI3", "AEI4", "CE1", "CE2", "CE3", "CE4", "CSE1", "CSE2", "CSE3", "CSE4", "ECE1", "ECE2", "ECE3", "ECE4", "ECE5", "EEE1", "EEE2", "EEE3", "EEE4", "ME1", "ME2", "ME3", "ME4", "ME5", "WS1", "WS2", "OL1", "OL2", "OL3", "OL4", "INF1", "INF2", "INF3", "INF4"};
-    String[] eventNames = {"Mr & Mrs Asthra", "Tesoro", "Ideen", "Network Gaming", "Kalinga", "Technocrat", "Pyrokinesis", "Inquizitive", "Castello", "Esittely", "Secret Rush", "Decollare", "Cybertron", "TecHtuZ", "BASH-Err", "Alt-Ctrl-Delicious", "Robo Race", "El-Classico", "Circuit Debugging", "VIBGYOR", "Vault2", "Recreate", "Bodha Paper", "In Time", "E Whizz", "Mex Hunt", "Papera", "Junkyard Wars", "Driver's Bay", "Aqua Missile", "Photography", "Python Programming", "Snapist", "Group Selfiee", "RoadRash", "Asthra in Frames", "4 X 4 Football", "Shooting", "Laser Tag", "Minute to Win"};
+    String[] eventNames = {"Mr & Ms Asthra", "Tesoro", "Ideen", "Network Gaming", "Kalinga", "Technocrat", "Pyrokinesis", "Inquizitive", "Castello", "Esittely", "Secret Rush", "Decollare", "Cybertron", "TecHtuZ", "BASH-Err", "Alt-Ctrl-Delicious", "Robo Race", "El-Classico", "Circuit Debugging", "VIBGYOR", "Vault2", "Recreate", "Bodha", "In Time", "E Whizz", "Mex Hunt", "Papera", "Junkyard Wars", "Driver's Bay", "Aqua Missile", "Photography", "Python Programming", "Snapist", "Group Selfiee", "RoadRash", "Asthra in Frames", "4 X 4 Football", "Shooting", "Laser Tag", "Minute to Win"};
     String[] eventDescriptions = new String[40];
     String[] eventRules = new String[40];
     String[] eventContacts = new String[40];

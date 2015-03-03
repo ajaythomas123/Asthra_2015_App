@@ -7,13 +7,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class EventInfoActivity extends BaseActivity {
+public class EventInfoActivity extends BaseActivity implements View.OnClickListener{
     TextView descriptionTextView, ruleTextView, contactTextView, prizeHeadTextView, prizeTextView, dayTextView;
     ImageView eventImage;
+    Button registerButton;
     String eventId, eventName, eventDescription, eventRule, eventContact, eventPrize, eventBranch, eventTime;
     Boolean eventSpot, eventTeam;
     int eventDay, eventPosterId;
@@ -30,6 +32,7 @@ public class EventInfoActivity extends BaseActivity {
         prizeTextView = (TextView) findViewById(R.id.prizeMoney);
         dayTextView = (TextView) findViewById(R.id.eventDay);
         prizeHeadTextView = (TextView) findViewById(R.id.prizeHead);
+        registerButton = (Button) findViewById(R.id.registerButton);
         eventImage = (ImageView) findViewById(R.id.eventImage);
         Intent intent = getIntent();
         eventId = intent.getStringExtra("eventId");
@@ -46,6 +49,10 @@ public class EventInfoActivity extends BaseActivity {
         eventPosterId = intent.getIntExtra("eventPosterId", R.drawable.csgo);
 
         toolbar.setTitle(eventName);
+        if(eventSpot){
+            registerButton.setVisibility(View.GONE);
+        }
+        registerButton.setOnClickListener(this);
         descriptionTextView.setText(eventDescription);
         ruleTextView.setText(eventRule);
         switch (eventDay){
@@ -98,6 +105,8 @@ public class EventInfoActivity extends BaseActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+
+        /*Hiding register button on the toolbar
         getMenuInflater().inflate(R.menu.menu_event_info, menu);
 
 
@@ -106,6 +115,7 @@ public class EventInfoActivity extends BaseActivity {
             item.setIcon(R.drawable.ic_register_white_24dp);
             item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         }
+        */
 
 
             return true;
@@ -136,5 +146,10 @@ public class EventInfoActivity extends BaseActivity {
     @Override
     protected int getSelfNavDrawerItem() {
         return NAVDRAWER_ITEM_EVENTS;
+    }
+
+    @Override
+    public void onClick(View v) {
+        startReg();
     }
 }

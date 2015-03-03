@@ -1,18 +1,35 @@
 package com.tiramisu.asthraappmk2;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class AboutUs extends BaseActivity {
+
+    TextView appVersionTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        super.onBaseCreate("About Us");
+        super.onBaseCreate("About");
+
+        appVersionTextView = (TextView) findViewById(R.id.appVersion);
+        PackageInfo pInfo = null;
+        try {
+            pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        String version = pInfo.versionName;
+
+        appVersionTextView.setText("Version: " + version);
+
     }
 
 

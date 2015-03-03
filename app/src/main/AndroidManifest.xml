@@ -30,7 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
+        <!--<activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
@@ -38,20 +38,22 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
+        </activity>-->
         <activity
             android:name=".EventsActivity"
             android:label="@string/title_activity_events" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tiramisu.asthraappmk2.MainActivity" />
+            <intent-filter>
+                <action android:name="com.tiramisu.AsthraAppMk2.EVENTSACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".RegistrationListActivity"
             android:label="@string/title_activity_registration_list" >
-            <meta-data
+            <!--<meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tiramisu.asthraappmk2.MainActivity" />
+                android:value="com.tiramisu.asthraappmk2.EventsActivity" />-->
         </activity>
         <activity
             android:name=".RegistrationActivity"
@@ -63,37 +65,37 @@
         <activity
             android:name=".EventInfoActivity"
             android:label="@string/title_activity_event_info" >
-            <meta-data
+            <!--<meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tiramisu.asthraappmk2.EventsActivity" />
+                android:value="com.tiramisu.asthraappmk2.EventsActivity" />-->
         </activity>
         <activity
             android:name=".InformalsActivity"
             android:label="@string/title_activity_informals" >
-            <meta-data
+            <!--<meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tiramisu.asthraappmk2.MainActivity" />
+                android:value="com.tiramisu.asthraappmk2.EventsActivity" />-->
         </activity>
         <activity
             android:name=".LocationActivity"
             android:label="@string/title_activity_location" >
-            <meta-data
+            <!--<meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tiramisu.asthraappmk2.MainActivity" />
+                android:value="com.tiramisu.asthraappmk2.EventsActivity" />-->
         </activity>
         <activity
             android:name=".ContactUs"
             android:label="@string/title_activity_contact_us" >
-            <meta-data
+            <!--<meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tiramisu.asthraappmk2.MainActivity" />
+                android:value="com.tiramisu.asthraappmk2.EventsActivity" />-->
         </activity>
         <activity
             android:name=".AboutUs"
             android:label="@string/title_activity_about_us" >
-            <meta-data
+            <!--<meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.tiramisu.asthraappmk2.MainActivity" />
+                android:value="com.tiramisu.asthraappmk2.EventsActivity" />-->
         </activity>
         <!--
         This Part should be kept last!
@@ -101,7 +103,7 @@
         -->
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyD13l9dEUbr1iAqdopiRzBzYNVxEDi655g" />
+            android:value="AIzaSyDsvTrCO_qt9bnvjZFisKO802e-zDNcPu8" />
 
 
     </application>
