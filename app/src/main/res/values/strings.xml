@@ -36,6 +36,7 @@
     <string name="title_activity_event_info">EventInfoActivity</string>
 
     <string-array name="event_descriptions">
+        <item>  Lucky Draw</item>
         <item>  Management</item>
         <item>  Treasure Hunt</item>
         <item>  Project Presentation</item>
@@ -78,31 +79,32 @@
         <item/>
     </string-array>
     <string-array name="event_rules">
+        <item><![CDATA[Rules and Regulations:\n• Multiple entries from the same device will result in disqualification]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Individual entry for girls and boys.\n• Preliminary rounds will be aptitude test and a confidence testing Roadies interview.\n• Shortlisted contestants will enter the main rounds.\n• Main rounds consist of different games and tasks to test your guts, confidence, management skills and attitude.\n• Final results will be based on judging panel\'s decision.\n• The volunteers have the right to report in case of malpractices by contestants.\n• Use of cellphones during the event is strictly prohibited.\n\nTeam Info: Individual event \nVisit www.asthra2015.com for more details]]></item>
         <item>Contact event coordinator for Rules and Regulations</item>
+        <item><![CDATA[Rules and Regulations:\n• Students must set up their project, remain with it throughout their judging period and remove it at the end of the day.\n• Students must be prepared to answer the judges\' questions about the content and developement of the projects.\n• Students must bring all equipment (including extension cords if required).\n• Two power outlets will be provided at the venue for each project.\n• A label must be attached to the back of the project with the student\'s name, telephone number and college name.\n• Projects will be judged based on their creativity, novelty and cost effectiveness.\n\nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[• Crysis: Warhead\n•	FIFA-11\n•	Asphalt 8: Airborne\n•	MotoGP\n•	Need for Speed: Most Wanted\nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Criteria for judgment:\n• Team work \n• Technical Knowledge \n• Time Management \n• Management skills\n\nTeam Info: 2 members per team \nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Topic: Automation in Day-to-Day Life\n\nRules and Regulations:\n• Participants should be ready with their PPTs at the time of registration\n• The way of presentation, your knowledge and the content will have equal weightage\n• Your ideas should be conveyed within the time limit of 5 minutes\n• Criteria for going to the second round will be your overall performance\n\nTeam Info: Individual event \nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Participation is open to all streams.\n• The decisions taken by the programming committee will be final.\n\nTeam Info: 2 members per team \nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Preliminary: Objective type questions based on GK , IQ etc.\n\nTeam Info: 2 members per team \nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Materials will be provided.\n• If the maximum number of teams exceeds four, prelims round will be conducted.\n• Use of materials other than the materials provided will lead to disqualification.\n• Each team will be provided with the same quantity of sand.\n• The size of the structure should be in accordance with the quantity of sand provided.\n• Judges\' decision shall be final and binding on all.\n• The organizers reserve all rights to change any or all of the above rules as they deem fit.\n\nTeam Info: 4 members per team (max) \nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Papers should be based on civil related topics.\n• Papers to be presented will be selected on the basis of abstract.\n• The abstract should contain a maximum of 500 words.\n• Participants have to mail their abstract for screening in PDF format.\nMail id:esittely.asthra15@gmail.com.\n• Last date of submission of abstract is 10th March 2015.\n• Only undergraduates and postgraduates from any recognized university can participate.\n• The abstracts as well as the paper will be judged on the basis of their innovation, knowledge of the field and presentation skills.\n• Time limit for the presentation is 10 minutes. An additional 5 minutes will be given for Q&A\n• Judges decision shall be final and binding on all.\n• The organizers reserve all rights to change any or all of the above rules as they deem fit.\n\nTeam Info: 2 members per team (max) \nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Uses of mobile phones is strictly prohibited during the event.\n• You have to pass through a series of checkpoints in the campus or nearby area as per the clues given.\n• At each checkpoint you will have a simple task to complete; the clues for the next checkpoint will be hidden inside the task you complete.\n• At each checkpoint you will have a time penalty or a bonus depending upon your performance.\n• There will be more than one path from one checkpoint to another.\n• Only 4 teams will enter into the final round.\n• The first team to reach the destination will win.\n• The organizers reserve all rights to change any or all of the above rules as they deem fit.\n\nTeam Info: 4 members per team (max)\nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Materials will be provided.\n• Any innovative product using the materials provided can be created and launched.\n• Use of any additional material will result in disqualification.\n• Only 5 teams will enter the final round.\n• Use of mobile phones and other electronic items is strictly prohibited.\n• Time is restricted to two hours(for creation of products)\n• For launching products 10 minutes will be provided.\n• Judge\'s decision will be final.\n• The organizers reserve all rights to change any or all of the above rules as they deem fit.\n\nTeam Info: 3 members per team (max)\nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Stages:\n1. Cypher Decryption\n2. Back Track\n3. Tech Blog\n4. The Maze Runner\n5. Matrix War\n\nRules and Regulations:\n• Question may be based on computer related topics.\n• Judge\'s decision shall be final and binding on all.\n\nTeam Info: 2 members per team (max)\nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• The members cannot split during the course of the event.\n• There are two stages in the event - The preliminary round is open to all and the top 6 teams at the end of the preliminary will participate in the final hunt for the treasure.\n• Use of mobile phones is strictly prohibited during event.\n• The first team to reach the destination will win.\n• Organizers\' decision will be final.\n\nTeam Info: 3 members per team \nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Levels:\n1. Preliminary\n2. Scramble\n3. Mashup\n\nRules and Regulations:\n• Use of mobile phones or any other electronic devices is strictly prohibited.\n• Change of any participant of a team is not allowed after registration.\n• Judge\'s decision shall be final and binding on all.\n• The organizers reserve all rights to change any or all of the above rules as they deem fit.\n\nTeam Info: 2 members per team (max)\nVisit www.asthra2015.com for more details]]></item>
         <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item><![CDATA[• Crysis: Warhead\n•	FIFA-11\n•	Asphalt 8: Airborne\n•	MotoGP\n•	Need for Speed: Most Wanted\nContact event coordinator for Rules and Regulations]]></item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item><![CDATA[Topic: Power Quality Issues in Power System\n• Continuous no break in power\n• Voltage regulation\n• Sine wave\n• Isolation\n• Constant Frequency\nContact event coordinator for Rules and Regulations]]></item>
-        <item>Contact event coordinator for Rules and Regulations</item>
-        <item>Contact event coordinator for Rules and Regulations</item>
+        <item><![CDATA[Rounds:\n1. Preliminary\n2. Semi-final\n3. Final\n\nRules and Regulations:\n• Registration fee : Rs. 200 per team\• Students from different institutions can form a team.\n• The bot has to reach the destination and score the maximum points with minimum penalties.\n• Multiple bots are allowed from same team but with separate registration fees.\n• Robots can be built using wheels, tracks or any other styles or methods.\n• Length and width of robot must not exceed 30cm X 30cm.\n• There is no limitation of height however.\n\nTeam Info: 4 members per team (max)\nVisit www.asthra2015.com for details regarding Control and Power Supply and Arena Specifications]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Registration Fee: Rs. 200 per team\n• Students from different institutions can form a team.\n• Bot maximum dimensions should be 30cm X 30cm X 30 cm.\n• Maximum of 24v will be allowed on the bot, no external supply will be allowed.\n• Bot can be wired or wireless.\n• Maximum weight of the bot is 4kgs.\n• Both wired and wireless robots are allowed.\n• In case of wireless robots, each robot must be able to support multi frequency so that there is no interference with the opponent’s robots.\n\nTeam Info: 2 members per team \nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Registration Fee: Rs.100 per team.\n• Basic knowledge on electronic circuits.\n• Event managers\' decision will be final.\n\nTeam Info: 2 members per team (max)\nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Registration Fee: 100 per team\n• Consists of 7 simple levels\n• Technical and non technical levels are included\n• Event coordinator\'s decision will be final\n\nTeam Info: 2 members per team \nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• Registration Fee: 50 per participant\n• Participants will have to reach point A from point B and complete the given task in minimum time.\n• Decision of the judges shall be considered as final and indisputable.\n• Rules are subjected to change without any prior notice.\n\nTeam Info: Individual event\nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• The participants should complete the given tasks with maximum perfection in minimum time.\n• The maximum time available will be only 10 mins.\n• The participants should make sure that at the end of the task all the given parts are include in the assembly.\n• Changes can be made to the rules and regulations by the event coordinator.\n\nTeam Info: Individual event\nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Topic: Power Quality Issues in Power System\n• Continuous no break in power\n• Voltage regulation\n• Sine wave\n• Isolation\n• Constant Frequency\n\nRules and Regulations:\n• All the contestants should prepare the PPT.\n• Presentation time will be minimum 20 mins and maximum time limit will be 30 mins.\n• The contestants who are elected to the second level will have to prepare a presentation within 5- 10 mins and presentation time will be less than 10 min.\n• Any change can be made to the rules by event coordinator.\n• All contestants should bring their own laptops.\n\nTeam Info: Individual event\nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• A maximum of 3 mins will be allowed but time of completion of task of each team will be noted.\n• Each player of a team is allowed to do any of the 6 tasks (like Tag Team).\n• Any change can be made to the rules and regulations by the event coordinator.\n\nTeam Info: 2 members per team\nVisit www.asthra2015.com for more details]]></item>
+        <item><![CDATA[Rules and Regulations:\n• The time limit for each level is 10 minutes.\n• The respective group can skip max 2 levels.\n• Participants can use internet connection for solving answers.\n• Decisions of the respective volunteer will be final.\n• Spot checking and evaluation conducted by respective volunteer.\n\nTeam Info: 2 members per team (max)\nVisit www.asthra2015.com for more details]]></item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
         <item>Contact event coordinator for Rules and Regulations</item>
@@ -120,6 +122,7 @@
         <item>Contact event coordinator for Rules and Regulations</item>
     </string-array>
     <string-array name="event_contacts">
+        <item>Bibin Joseph: +91 9020339361</item>
         <item>Vazeem Harris: +91 9946730783</item>
         <item>Joseph Thomas: +91 9567734090</item>
         <item>Paulson Mathew: +91 9048509298</item>
@@ -134,7 +137,7 @@
         <item>Micky Antony: +91 8281350298</item>
         <item>Vishnu Babu: +91 9567691004</item>
         <item>Akhil B: +91 9447915180</item>
-        <item>Paul Saba: +91 7560869889</item>
+        <item>Abhiram Vijay: +91 9400231871</item>
         <item>Anandhu B Raj: +91 9496323637</item>
         <item>Sajin Saj: +91 9497579363</item>
         <item>Renold Thomas: +91 9539113734</item>
@@ -162,6 +165,7 @@
         <item>Nithin Suresh: +91 8281290274</item>
     </string-array>
     <string-array name="event_prizes">
+        <item>1K</item>
         <item>10K</item>
         <item>10K</item>
         <item>15K</item>

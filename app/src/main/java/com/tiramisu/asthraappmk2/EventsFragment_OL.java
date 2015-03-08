@@ -24,10 +24,10 @@ public class EventsFragment_OL extends Fragment implements ClickListener{
     EventsActivity eventsActivity;
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
-    String[] olEventDescriptions = new String[40];
-    String[] olEventRules = new String[40];
-    String[] olEventContacts = new String[40];
-    String[] olEventPrizes = new String[40];
+    String[] olEventDescriptions = new String[41];
+    String[] olEventRules = new String[41];
+    String[] olEventContacts = new String[41];
+    String[] olEventPrizes = new String[41];
 
     public EventsFragment_OL() {
         // Required empty public constructor
@@ -45,7 +45,7 @@ public class EventsFragment_OL extends Fragment implements ClickListener{
         olEventContacts = getResources().getStringArray(R.array.event_contacts);
         olEventPrizes = getResources().getStringArray(R.array.event_prizes);
         String branch;
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 41; i++) {
             branch = eventsActivity.eventBranches[i];
             if (branch.equals("OL")) {
                 olEventDetails = new EventDetails();

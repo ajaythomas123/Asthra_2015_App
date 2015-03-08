@@ -24,10 +24,10 @@ public class EventsFragment_WS extends Fragment implements ClickListener{
     EventsActivity eventsActivity;
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
-    String[] wsEventDescriptions = new String[40];
-    String[] wsEventRules = new String[40];
-    String[] wsEventContacts = new String[40];
-    String[] wsEventPrizes = new String[40];
+    String[] wsEventDescriptions = new String[41];
+    String[] wsEventRules = new String[41];
+    String[] wsEventContacts = new String[41];
+    String[] wsEventPrizes = new String[41];
 
     public EventsFragment_WS() {
         // Required empty public constructor
@@ -45,7 +45,7 @@ public class EventsFragment_WS extends Fragment implements ClickListener{
         wsEventContacts = getResources().getStringArray(R.array.event_contacts);
         wsEventPrizes = getResources().getStringArray(R.array.event_prizes);
         String branch;
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 41; i++) {
             branch = eventsActivity.eventBranches[i];
             if (branch.equals("WS")) {
                 wsEventDetails = new EventDetails();

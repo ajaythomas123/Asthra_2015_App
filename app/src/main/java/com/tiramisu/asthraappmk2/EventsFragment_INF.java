@@ -24,10 +24,10 @@ public class EventsFragment_INF extends Fragment implements ClickListener{
     EventsActivity eventsActivity;
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
-    String[] infEventDescriptions = new String[40];
-    String[] infEventRules = new String[40];
-    String[] infEventContacts = new String[40];
-    String[] infEventPrizes = new String[40];
+    String[] infEventDescriptions = new String[41];
+    String[] infEventRules = new String[41];
+    String[] infEventContacts = new String[41];
+    String[] infEventPrizes = new String[41];
 
     public EventsFragment_INF() {
         // Required empty public constructor
@@ -45,7 +45,7 @@ public class EventsFragment_INF extends Fragment implements ClickListener{
         infEventContacts = getResources().getStringArray(R.array.event_contacts);
         infEventPrizes = getResources().getStringArray(R.array.event_prizes);
         String branch;
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 41; i++) {
             branch = eventsActivity.eventBranches[i];
             if (branch.equals("INF")) {
                 infEventDetails = new EventDetails();

@@ -1,12 +1,14 @@
 package com.tiramisu.asthraappmk2;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
@@ -45,9 +47,12 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
     int eventDay, eventPosterId, success;
     ProgressDialog pDialog;
     JSONParser jsonParser = new JSONParser();
-    //REG_URL="http://server.heyteam.me/SJCET/asthra-reg.php"
+    //private static final String REG_URL="http://server.heyteam.me/SJCET/asthra-reg.php";
     private static final String REG_URL="http://server.asthra2015.com/asthra-reg.php";
     private static final String TAG_SUCCESS = "success";
+
+    TelephonyManager telephonyManager;
+    String uid;
 
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
@@ -63,6 +68,10 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         super.onBaseCreate("Registration");
+
+        telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
+        uid = telephonyManager.getDeviceId();
+
         Intent intent = getIntent();
         studName = (EditText) findViewById(R.id.reg_name);
         studCollege = (EditText) findViewById(R.id.reg_college);
@@ -106,6 +115,10 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
         eventDay = intent.getIntExtra("eventDay", 1);
         eventPosterId = intent.getIntExtra("eventPosterId", R.drawable.csgo);
         toolbar.setTitle(eventName+" Registration");
+
+        if(eventId.equals("LD")){
+            eventName = uid;
+        }
 
         /*To Hide the Team Section if not Group Event!*/
         teamContainer = (LinearLayout) findViewById(R.id.TeamLayout);
@@ -187,8 +200,9 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_donereg) {
-            if(isNetworkAvailable())
+            if(isNetworkAvailable()){
                 doReg();
+            }
             else
                 Toast.makeText(this,"Check your Internet connection!", Toast.LENGTH_SHORT).show();
             return true;
@@ -356,7 +370,10 @@ public class RegistrationActivity extends BaseActivity implements AdapterView.On
 
                 if (success == 1) {
                     Log.d("Successfully Login!", "");
-                    msg = "You Have Successfully Registered for "+EventName_Asyncdata;
+                    //msg = "You Have Successfully Registered for " + EventName_Asyncdata;
+                    /*For the lucky draw, eventName gets changed to device ID and as a result EventName_Asyncdata.
+                    * So, I'm passing the getStringExtra intent directly.*/
+                    msg = "You Have Successfully Registered for " + getIntent().getStringExtra("eventName");
                     return msg;
                 } else {
                     //TODO: We could add responses including Registration Closed at this point!!!

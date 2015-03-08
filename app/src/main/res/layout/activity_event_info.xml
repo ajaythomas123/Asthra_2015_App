@@ -29,13 +29,25 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/csgo"/>
 
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:padding="4dp"
+                android:background="@color/primaryColor"
+                android:textColor="@color/white_background"
+                android:layout_below="@id/eventImage"
+                android:text="Register"/>
+
 
                 <TextView
                     android:id="@+id/eventDescription"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Description"
-                    android:layout_below="@id/eventImage"
+                    android:layout_below="@id/registerButton"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
                     android:paddingTop="8dp"
@@ -109,15 +121,7 @@
                 android:paddingTop="8dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"/>
 
-            <Button
-                android:id="@+id/registerButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="8dp"
-                android:padding="4dp"
-                android:layout_below="@id/contactInfo"
-                android:text="Register"/>
+
 
 
 

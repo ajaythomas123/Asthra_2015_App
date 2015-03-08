@@ -1,14 +1,17 @@
 package com.tiramisu.asthraappmk2;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +27,10 @@ public class EventsFragment_GE extends Fragment implements ClickListener{
     EventsActivity eventsActivity;
     RecyclerView recyclerView;
     EventCardAdapter eventCardAdapter;
-    String[] geEventDescriptions = new String[40];
-    String[] geEventRules = new String[40];
-    String[] geEventContacts = new String[40];
-    String[] geEventPrizes = new String[40];
+    String[] geEventDescriptions = new String[41];
+    String[] geEventRules = new String[41];
+    String[] geEventContacts = new String[41];
+    String[] geEventPrizes = new String[41];
 
     public EventsFragment_GE() {
         // Required empty public constructor
@@ -45,7 +48,7 @@ public class EventsFragment_GE extends Fragment implements ClickListener{
         geEventContacts = getResources().getStringArray(R.array.event_contacts);
         geEventPrizes = getResources().getStringArray(R.array.event_prizes);
         String branch;
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 41; i++) {
             branch = eventsActivity.eventBranches[i];
             if (branch.equals("GE")) {
                 geEventDetails = new EventDetails();

@@ -1,15 +1,19 @@
 package com.tiramisu.asthraappmk2;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class EventInfoActivity extends BaseActivity implements View.OnClickListener{
@@ -20,6 +24,7 @@ public class EventInfoActivity extends BaseActivity implements View.OnClickListe
     Boolean eventSpot, eventTeam;
     int eventDay, eventPosterId;
     MenuItem item;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
